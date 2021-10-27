@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;resultLogin&apos; in &apos;be.helha.aemt.dao.UtilisateurDAO.findByPostalCode(...)&apos; to &apos;resultCodePostal&apos;&#x0A;- Original project: &apos;pUtilisateur&apos;&#x0A;- Original element: &apos;be.helha.aemt.dao.UtilisateurDAO.findByPostalCode(int).resultLogin&apos;&#x0A;- Renamed element: &apos;resultLogin&apos;&#x0A;- Update references to refactored element" description="Rename local variable &apos;resultLogin&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;be.helha.aemt.dao{UtilisateurDAO.java[UtilisateurDAO~findByPostalCode~I@resultLogin!2717!2781!2737!2747!QList\&lt;QUtilisateur;&gt;;!0!false" name="resultCodePostal" references="true" stamp="1635232268929" version="1.0"/>
+</session>
