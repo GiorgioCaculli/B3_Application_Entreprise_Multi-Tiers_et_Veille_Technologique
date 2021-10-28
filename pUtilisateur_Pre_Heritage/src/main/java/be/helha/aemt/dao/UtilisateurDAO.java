@@ -5,12 +5,10 @@ import java.util.List;
 
 import javax.persistence.NoResultException;
 import javax.persistence.Query;
-import javax.persistence.TypedQuery;
 
 import be.helha.aemt.entities.Adresse;
 import be.helha.aemt.entities.Commande;
 import be.helha.aemt.entities.Utilisateur;
-import be.helha.aemt.entities.Visiteur;
 
 public class UtilisateurDAO extends DAO< Utilisateur >
 {
@@ -36,8 +34,14 @@ public class UtilisateurDAO extends DAO< Utilisateur >
         String loginQuery = "SELECT u FROM Utilisateur u WHERE u.login = :login";
         Query query = em.createQuery( loginQuery );
         query.setParameter( "login", u.getLogin() );
-        List< Utilisateur > resultLogin = query.getResultList();
-        return resultLogin.size() > 0 ? resultLogin.get(0) : null;
+        Utilisateur resultLogin = null;
+        try
+        {
+            resultLogin = ( Utilisateur ) query.getResultList().get( 0 );   
+        }
+        catch ( NoResultException nre ) {
+        }
+        return resultLogin;
     }
     
     public List< Utilisateur > findByAddress( Adresse a )
@@ -96,7 +100,7 @@ public class UtilisateurDAO extends DAO< Utilisateur >
         }
         em.persist( utilisateur );
         submit();
-        em.detach( utilisateur ); /* En RESSOURCE_LOCAL */
+        em.detach( utilisateur ); /* En RESOURCE_LOCAL */
         return utilisateur;
     }
 
@@ -161,10 +165,6 @@ public class UtilisateurDAO extends DAO< Utilisateur >
     @Override
     public List< Utilisateur > findAll()
     {
-        String loginQuery = "SELECT u FROM Utilisateur u";
-        TypedQuery< Utilisateur > query = em.createQuery( loginQuery, Utilisateur.class );
-        List< Utilisateur > resultAdresse = query.getResultList();
-        em.clear();
-        return resultAdresse;
+        return null;
     }
 }

@@ -9,7 +9,6 @@
     <persistence-unit name="pUUtilisateur"
         transaction-type="RESOURCE_LOCAL">
 
-        <class>be.helha.aemt.entities.Visiteur</class>
         <class>be.helha.aemt.entities.Utilisateur</class>
         <class>be.helha.aemt.entities.Compte</class>
         <class>be.helha.aemt.entities.Adresse</class>

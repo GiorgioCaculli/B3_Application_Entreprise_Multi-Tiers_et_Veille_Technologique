@@ -8,7 +8,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Inheritance;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
@@ -17,13 +16,11 @@ import javax.persistence.OneToOne;
 import javax.persistence.UniqueConstraint;
 
 @Entity
-public class Utilisateur extends Visiteur
+public class Utilisateur
 {
-	/*
     @Id
     @GeneratedValue( strategy = GenerationType.IDENTITY )
     private Integer id;
-    */
     private String login;
     private String password;
     private String email;
@@ -38,9 +35,8 @@ public class Utilisateur extends Visiteur
     @OneToMany( cascade = { CascadeType.PERSIST, CascadeType.REMOVE } )
     private List< Commande > commandes;
     
-    public Utilisateur( String adresseIP, String login, String password, String email, Compte compte, Adresse adresse )
+    public Utilisateur( String login, String password, String email, Compte compte, Adresse adresse )
     {
-    	super( adresseIP );
         this.login = login;
         this.password = password;
         this.email = email;
@@ -49,14 +45,14 @@ public class Utilisateur extends Visiteur
         commandes = new ArrayList< Commande >();
     }
 
-    public Utilisateur( String adresseIP, String login, String password, String email, Compte compte )
+    public Utilisateur( String login, String password, String email, Compte compte )
     {
-        this( adresseIP, login, password, email, compte, new Adresse() );
+        this( login, password, email, compte, new Adresse() );
     }
 
-    public Utilisateur( String adresseIP, String login, String password, String email )
+    public Utilisateur( String login, String password, String email )
     {
-        this( adresseIP, login, password, email, new Compte() );
+        this( login, password, email, new Compte() );
     }
 
     public Utilisateur()
@@ -91,6 +87,11 @@ public class Utilisateur extends Visiteur
     public void setEmail( String email )
     {
         this.email = email;
+    }
+
+    public Integer getId()
+    {
+        return id;
     }
     
     public Compte getCompte()
@@ -135,7 +136,7 @@ public class Utilisateur extends Visiteur
     public String toString()
     {
         return String.format(
-                "%s - Login: %s - Email: %s - Password: %s\nCompte: %s\nAdresse: %s\n",
-                super.toString(), login, email, password, compte, adresse );
+                "ID: %d - Login: %s - Email: %s - Password: %s\nCompte: %s\nAdresse: %s",
+                id, login, email, password, compte, adresse );
     }
 }

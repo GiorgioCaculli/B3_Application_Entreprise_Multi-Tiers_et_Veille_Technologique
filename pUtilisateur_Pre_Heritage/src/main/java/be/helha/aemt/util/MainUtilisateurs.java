@@ -20,13 +20,11 @@ import be.helha.aemt.dao.CommandeDAO;
 import be.helha.aemt.dao.DAO;
 import be.helha.aemt.dao.IDAO;
 import be.helha.aemt.dao.UtilisateurDAO;
-import be.helha.aemt.dao.VisiteurDAO;
 import be.helha.aemt.entities.Adresse;
 import be.helha.aemt.entities.Article;
 import be.helha.aemt.entities.Commande;
 import be.helha.aemt.entities.Compte;
 import be.helha.aemt.entities.Utilisateur;
-import be.helha.aemt.entities.Visiteur;
 
 public class MainUtilisateurs
 {
@@ -101,9 +99,8 @@ public class MainUtilisateurs
         
         //em.persist( c1 );
         
-        Utilisateur u1 = new Utilisateur( "127.0.0.1", String.format( "L%s", baseInfo ), String.format( "P%s", baseInfo ), String.format( "E%s", baseInfo ), c1, a1 );
+        Utilisateur u1 = new Utilisateur( String.format( "L%s", baseInfo ), String.format( "P%s", baseInfo ), String.format( "E%s", baseInfo ), c1, a1 );
         u1.ajouterCommande( co1 );
-        Visiteur v1 = new Visiteur( "185.212.226.76" );
         
         //em.persist( u1 );
         
@@ -121,19 +118,12 @@ public class MainUtilisateurs
         ArticleDAO articleDAO = new ArticleDAO( dbName );
         AdresseDAO adresseDAO = new AdresseDAO( dbName );
         CommandeDAO commandeDAO = new CommandeDAO( dbName );
-        VisiteurDAO visiteurDAO = new VisiteurDAO(dbName);
-        //u1 = utilisateurDAO.read( 19 );
+        u1 = utilisateurDAO.read( 19 );
 
         /* C.R.U.D. */
 
         /* CREATE */
         System.out.println( "CREATE: " + utilisateurDAO.create( u1 ) );
-        System.out.println( "CREATE: " + visiteurDAO.create( v1 ) );
-        
-        System.out.println( "Find Visiteur" );
-        System.out.println( visiteurDAO.findAll() );
-        System.out.println( "Find Utilisateur" );
-        System.out.println( utilisateurDAO.findAll() );
         
         /*Utilisateur u3 = new Utilisateur( String.format( "L%s", baseInfo ), String.format( "P%s", baseInfo ), String.format( "E%s", baseInfo ), c1, a1 );
         System.out.println( udao.create( u3 ) );*/
@@ -142,8 +132,9 @@ public class MainUtilisateurs
         Utilisateur u2 = utilisateurDAO.read( u1.getId() );
         //Utilisateur u2 = new Utilisateur( "LProb", "PProb", "EProb", u1.getCompte() );
         System.out.println( "READ: " + u2 );
-        a1 = adresseDAO.read( 10 );
-        Utilisateur testAdresse = new Utilisateur( "127.0.0.1", "TestLogin4", "TestPassword4", "TestEmail4", c1, a1 );
+        AdresseDAO adao = new AdresseDAO( "pUUtilisateur" );
+        a1 = adao.read( 19 );
+        Utilisateur testAdresse = new Utilisateur( "TestLogin4", "TestPassword4", "TestEmail4", c1, a1 );
         utilisateurDAO.create( testAdresse );
         
         /* UPDATE */
