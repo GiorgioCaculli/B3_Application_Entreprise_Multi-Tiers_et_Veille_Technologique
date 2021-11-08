@@ -40,7 +40,7 @@ public class MainUtilisateurs
         EntityManager em = emf.createEntityManager();
         EntityTransaction tx = em.getTransaction();*/
         
-        Compte c1 = new Compte( "C" + baseInfo );
+        /*Compte c1 = new Compte( "C" + baseInfo );
         Adresse a1 = new Adresse( "R" + baseInfo, "N" + baseInfo, "V" + baseInfo, Integer.parseInt( baseInfo ) );
         Random randPrix = new Random();
         Article ar1 = new Article( "Banana", randPrix.nextDouble() );
@@ -53,9 +53,10 @@ public class MainUtilisateurs
         co1.ajouterArticle( ar2 );
         co1.ajouterArticle( ar3 );
         co1.ajouterArticle( ar4 );
-        co2.ajouterArticle( ar3 );
+        co2.ajouterArticle( ar3 );*/
         
         String tousLesArticlesQuery = "SELECT a FROM Article a";
+        
         /*Query query = em.createQuery( tousLesArticlesQuery );
         
         
@@ -101,9 +102,9 @@ public class MainUtilisateurs
         
         //em.persist( c1 );
         
-        Utilisateur u1 = new Utilisateur( "127.0.0.1", String.format( "L%s", baseInfo ), String.format( "P%s", baseInfo ), String.format( "E%s", baseInfo ), c1, a1 );
+        /*Utilisateur u1 = new Utilisateur( "127.0.0.1", String.format( "L%s", baseInfo ), String.format( "P%s", baseInfo ), String.format( "E%s", baseInfo ), c1, a1 );
         u1.ajouterCommande( co1 );
-        Visiteur v1 = new Visiteur( "185.212.226.76" );
+        Visiteur v1 = new Visiteur( "185.212.226.76" );*/
         
         //em.persist( u1 );
         
@@ -113,7 +114,7 @@ public class MainUtilisateurs
         //em.close();
         //emf.close();
 
-        System.out.println( u1 );
+        /*System.out.println( u1 );*/
         
         String dbName = "pUUtilisateur";
         
@@ -122,43 +123,69 @@ public class MainUtilisateurs
         AdresseDAO adresseDAO = new AdresseDAO( dbName );
         CommandeDAO commandeDAO = new CommandeDAO( dbName );
         VisiteurDAO visiteurDAO = new VisiteurDAO(dbName);
+        
+        Article caculliArticle = new Article( "CACULLI", 0.10 );
+        
+        Adresse caculliAdresse = new Adresse( "CACULLI", "12", "CACULLI", 7000 );
+        
+        Compte caculliCompte1 = new Compte( "CACULLI" );
+        Compte caculliCompte2 = new Compte( "CACULLI_GIORGIO" );
+        
+        Utilisateur caculliUtilisateur1 = new Utilisateur( "127.0.0.1", "CACULLI", "CACULLI-PASSWORD", "CACULLI@EMAIL.COM", caculliCompte1, caculliAdresse );
+        Utilisateur caculliUtilisateur2 = new Utilisateur( "127.0.0.1", "CACULLI_GIORGIO", "CACULLI_GIORGIO_PASSWORD", "CACULLI_GIORGIO@EMAIL.COM", caculliCompte2, caculliAdresse );
+        
+        Commande caculliCommande = new Commande( LocalDate.now() );
+        commandeDAO.create( caculliCommande );
+        
+        List< Commande > caculliCommandes = new ArrayList<Commande>();
+        
+        articleDAO.create(caculliArticle);
+        caculliCommandes.add( caculliCommande );
+        
+        caculliUtilisateur1.setCommandes( caculliCommandes );
+        caculliUtilisateur2.setCommandes( caculliCommandes );
+        
+        utilisateurDAO.create( caculliUtilisateur1 );
+        utilisateurDAO.create( caculliUtilisateur2 );
+        
+        
         //u1 = utilisateurDAO.read( 19 );
 
         /* C.R.U.D. */
 
         /* CREATE */
-        System.out.println( "CREATE: " + utilisateurDAO.create( u1 ) );
+        /*System.out.println( "CREATE: " + utilisateurDAO.create( u1 ) );
         System.out.println( "CREATE: " + visiteurDAO.create( v1 ) );
         
         System.out.println( "Find Visiteur" );
         System.out.println( visiteurDAO.findAll() );
         System.out.println( "Find Utilisateur" );
-        System.out.println( utilisateurDAO.findAll() );
+        System.out.println( utilisateurDAO.findAll() );*/
         
         /*Utilisateur u3 = new Utilisateur( String.format( "L%s", baseInfo ), String.format( "P%s", baseInfo ), String.format( "E%s", baseInfo ), c1, a1 );
         System.out.println( udao.create( u3 ) );*/
         
         /* READ */
-        Utilisateur u2 = utilisateurDAO.read( u1.getId() );
+        /*Utilisateur u2 = utilisateurDAO.read( u1.getId() );
         //Utilisateur u2 = new Utilisateur( "LProb", "PProb", "EProb", u1.getCompte() );
         System.out.println( "READ: " + u2 );
         a1 = adresseDAO.read( 10 );
         Utilisateur testAdresse = new Utilisateur( "127.0.0.1", "TestLogin4", "TestPassword4", "TestEmail4", c1, a1 );
-        utilisateurDAO.create( testAdresse );
+        utilisateurDAO.create( testAdresse );*/
         
         /* UPDATE */
-        baseInfo = String.format( "%d", System.currentTimeMillis() % 1000 );
+        /*baseInfo = String.format( "%d", System.currentTimeMillis() % 1000 );
         u2.setLogin( "LModif" + baseInfo );
         u2.setPassword( "PModif" + baseInfo );
         u2.setEmail( "EModif" + baseInfo );
         u2.ajouterCommande( co2 );
         utilisateurDAO.update( u1, u2 );
-        System.out.println( "UPDATE: " + utilisateurDAO.read( u2.getId() ) );
+        System.out.println( "UPDATE: " + utilisateurDAO.read( u2.getId() ) );*/
         
         /* DELETE */
         //udao.delete( udao.read( u1.getId() ) );
         
-        System.out.println( "Find by Login" );
+        /*System.out.println( "Find by Login" );
         Utilisateur u10 = utilisateurDAO.findByLogin( u2 );
         System.out.println( u10 );
         
@@ -189,7 +216,7 @@ public class MainUtilisateurs
         
         System.out.println( "Find Articles by Utilisateur" );
         List< Article > articlesCodePostal = commandeDAO.findArticlesByCodePostal( u2.getAdresse().getCodePostal() );
-        System.out.println( articlesCodePostal );
+        System.out.println( articlesCodePostal );*/
         
         DAO.close();
     }

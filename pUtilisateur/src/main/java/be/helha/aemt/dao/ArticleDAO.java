@@ -5,6 +5,7 @@ import java.util.List;
 import javax.persistence.NoResultException;
 import javax.persistence.Query;
 
+import be.helha.aemt.entities.Adresse;
 import be.helha.aemt.entities.Article;
 import be.helha.aemt.entities.Utilisateur;
 
@@ -24,7 +25,7 @@ public class ArticleDAO extends DAO< Article >
         }
         String loginQuery = "SELECT a FROM Article a WHERE a.libelle = :libelle";
         Query query = em.createQuery( loginQuery );
-        query.setParameter( "rue", a.getLibelle() );
+        query.setParameter( "libelle", a.getLibelle() );
         Article resultArticle = null;
         try
         {
@@ -38,7 +39,24 @@ public class ArticleDAO extends DAO< Article >
     @Override
     public Article create( Article a )
     {
-        // TODO Auto-generated method stub
+        if( findArticleByLibelle( a ) != null )
+        {
+        	System.out.println("LIBELLE");
+            return null;
+        }
+        if( a == null )
+        {
+        	System.out.println("NULL");
+            return null;
+        }
+        if( a.getLibelle() == null )
+        {
+        	System.out.println("NO LIBELLE");
+            return null;
+        }
+        em.persist( a );
+        submit();
+        em.detach( a ); /* En RESSOURCE_LOCAL */
         return null;
     }
 

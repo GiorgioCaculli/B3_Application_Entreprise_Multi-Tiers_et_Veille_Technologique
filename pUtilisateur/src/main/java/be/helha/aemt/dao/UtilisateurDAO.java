@@ -8,6 +8,7 @@ import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 
 import be.helha.aemt.entities.Adresse;
+import be.helha.aemt.entities.Article;
 import be.helha.aemt.entities.Commande;
 import be.helha.aemt.entities.Utilisateur;
 import be.helha.aemt.entities.Visiteur;
@@ -94,6 +95,7 @@ public class UtilisateurDAO extends DAO< Utilisateur >
         {
             utilisateur.setAdresse( tmpAdresse );
         }
+        List< Article > articles = commandeDAO.findArticlesByUtilisateurLogin( utilisateur );
         em.persist( utilisateur );
         submit();
         em.detach( utilisateur ); /* En RESSOURCE_LOCAL */

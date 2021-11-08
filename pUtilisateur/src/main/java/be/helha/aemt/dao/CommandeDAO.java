@@ -1,8 +1,10 @@
 package be.helha.aemt.dao;
 
+import java.util.Collections;
 import java.util.List;
 
 import javax.persistence.NoResultException;
+import javax.persistence.Persistence;
 import javax.persistence.Query;
 
 import be.helha.aemt.entities.Adresse;
@@ -79,7 +81,25 @@ public class CommandeDAO extends DAO< Commande >
     @Override
     public Commande create( Commande commande )
     {
-        // TODO Auto-generated method stub
+        if( commande == null )
+        {
+            return null;
+        }
+        for( Article a : commande.getArticles() )
+        {
+        	if( findCommandeByArticle( a ).size() < 0 )
+        	{
+        		return null;
+        	}
+        }
+        List< Article > articles = commande.getArticles();
+        for( Article a : articles )
+        {
+        	commande.ajouterArticle( articleDAO.findArticleByLibelle( a ) );
+        }
+        em.persist( commande );
+        submit();
+        em.clear();
         return null;
     }
 
