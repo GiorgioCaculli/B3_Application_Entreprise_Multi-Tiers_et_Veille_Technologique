@@ -99,18 +99,20 @@ public class UtilisateurDAO extends DAO< Utilisateur >
         {
             utilisateur.setAdresse( tmpAdresse );
         }
-        List< Article > articles = commandeDAO.findArticlesByUtilisateurLogin( utilisateur );
         Commande commande = new Commande( LocalDate.now() );
-        for( Article article : articles )
+        for( Commande c : utilisateur.getCommandes() )
         {
-        	if( articleDAO.findArticleByLibelle( article ) != null )
-        	{
-        		commande.ajouterArticle( article );
-        	}
+            for( Article article : c.getArticles() )
+            {
+            	if( articleDAO.findArticleByLibelle( article ) != null )
+            	{
+            		commande.ajouterArticle( articleDAO.findArticleByLibelle( article ) );
+            	}
+            }
         }
-        List< Commande > commandes = new ArrayList<Commande>();
+        List< Commande > commandes = new ArrayList< Commande >();
         commandes.add( commande );
-        utilisateur.setCommandes(commandes);
+        utilisateur.setCommandes( commandes );
         em.persist( utilisateur );
         submit();
         em.detach( utilisateur ); /* En RESSOURCE_LOCAL */

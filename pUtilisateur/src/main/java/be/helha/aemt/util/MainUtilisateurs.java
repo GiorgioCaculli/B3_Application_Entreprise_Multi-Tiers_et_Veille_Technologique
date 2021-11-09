@@ -125,7 +125,7 @@ public class MainUtilisateurs
         VisiteurDAO visiteurDAO = new VisiteurDAO(dbName);
         
         Article caculliArticle = new Article( "CACULLI", 0.10 );
-        System.out.println( articleDAO.create( caculliArticle ) );
+        /*System.out.println( articleDAO.create( caculliArticle ) );*/
         
         Adresse caculliAdresse = new Adresse( "CACULLI", "12", "CACULLI", 7000 );
         
@@ -136,16 +136,17 @@ public class MainUtilisateurs
         Utilisateur caculliUtilisateur2 = new Utilisateur( "127.0.0.1", "CACULLI_GIORGIO", "CACULLI_GIORGIO_PASSWORD", "CACULLI_GIORGIO@EMAIL.COM", caculliCompte2, caculliAdresse );
         
         Commande caculliCommande = new Commande( LocalDate.now() );
+        caculliCommande.ajouterArticle( caculliArticle );
         
-        List< Commande > caculliCommandes = new ArrayList<Commande>();
+        List< Commande > caculliCommandes = new ArrayList< Commande >();
         
         caculliCommandes.add( caculliCommande );
         
         caculliUtilisateur1.setCommandes( caculliCommandes );
         caculliUtilisateur2.setCommandes( caculliCommandes );
         
-        System.out.println( utilisateurDAO.create( caculliUtilisateur1 ) );
-        System.out.println( utilisateurDAO.create( caculliUtilisateur2 ) );
+        /*System.out.println( utilisateurDAO.create( caculliUtilisateur1 ) );
+        System.out.println( utilisateurDAO.create( caculliUtilisateur2 ) );*/
         
         
         //u1 = utilisateurDAO.read( 19 );
