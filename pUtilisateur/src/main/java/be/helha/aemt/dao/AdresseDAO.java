@@ -62,8 +62,22 @@ public class AdresseDAO extends DAO< Adresse >
     @Override
     public Adresse create( Adresse adresse )
     {
-        // TODO Auto-generated method stub
-        return null;
+        if( findByRueNumeroCodePostalVille( adresse ) != null )
+        {
+            return null;
+        }
+        if( adresse == null )
+        {
+            return null;
+        }
+        if( adresse.getRue() == null || adresse.getVille() == null || adresse.getCodePostal() < 0 )
+        {
+            return null;
+        }
+        em.persist( adresse );
+        submit();
+        em.detach( adresse ); /* En RESSOURCE_LOCAL */
+        return adresse;
     }
 
     @Override

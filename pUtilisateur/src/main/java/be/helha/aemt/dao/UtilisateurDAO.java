@@ -1,5 +1,6 @@
 package be.helha.aemt.dao;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,6 +17,7 @@ import be.helha.aemt.entities.Visiteur;
 public class UtilisateurDAO extends DAO< Utilisateur >
 {
     private AdresseDAO adresseDAO;
+    private ArticleDAO articleDAO;
     private CommandeDAO commandeDAO;
     
     /* 
@@ -26,6 +28,8 @@ public class UtilisateurDAO extends DAO< Utilisateur >
     {
         super( dbName );
         adresseDAO = new AdresseDAO( dbName );
+        articleDAO = new ArticleDAO( dbName );
+        commandeDAO = new CommandeDAO( dbName );
     }
     
     public Utilisateur findByLogin( Utilisateur u )
@@ -96,6 +100,17 @@ public class UtilisateurDAO extends DAO< Utilisateur >
             utilisateur.setAdresse( tmpAdresse );
         }
         List< Article > articles = commandeDAO.findArticlesByUtilisateurLogin( utilisateur );
+        Commande commande = new Commande( LocalDate.now() );
+        for( Article article : articles )
+        {
+        	if( articleDAO.findArticleByLibelle( article ) != null )
+        	{
+        		commande.ajouterArticle( article );
+        	}
+        }
+        List< Commande > commandes = new ArrayList<Commande>();
+        commandes.add( commande );
+        utilisateur.setCommandes(commandes);
         em.persist( utilisateur );
         submit();
         em.detach( utilisateur ); /* En RESSOURCE_LOCAL */

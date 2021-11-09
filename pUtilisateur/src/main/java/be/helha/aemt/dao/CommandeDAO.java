@@ -100,14 +100,22 @@ public class CommandeDAO extends DAO< Commande >
         em.persist( commande );
         submit();
         em.clear();
-        return null;
+        return commande;
     }
 
     @Override
     public Commande read( Integer id )
     {
-        // TODO Auto-generated method stub
-        return null;
+        if( id == null )
+        {
+            return null;
+        }
+        Commande commande = em.find( Commande.class, id );
+        if( commande != null )
+        {
+            em.detach( commande );
+        }
+        return commande;
     }
 
     @Override

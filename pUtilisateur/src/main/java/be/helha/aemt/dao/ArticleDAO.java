@@ -37,27 +37,27 @@ public class ArticleDAO extends DAO< Article >
     }
 
     @Override
-    public Article create( Article a )
+    public Article create( Article article )
     {
-        if( findArticleByLibelle( a ) != null )
+        if( findArticleByLibelle( article ) != null )
         {
         	System.out.println("LIBELLE");
             return null;
         }
-        if( a == null )
+        if( article == null )
         {
         	System.out.println("NULL");
             return null;
         }
-        if( a.getLibelle() == null )
+        if( article.getLibelle() == null )
         {
         	System.out.println("NO LIBELLE");
             return null;
         }
-        em.persist( a );
+        em.persist( article );
         submit();
-        em.detach( a ); /* En RESSOURCE_LOCAL */
-        return null;
+        em.detach( article ); /* En RESSOURCE_LOCAL */
+        return article;
     }
 
     @Override
