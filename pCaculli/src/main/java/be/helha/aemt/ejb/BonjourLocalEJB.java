@@ -4,9 +4,9 @@ import javax.ejb.Stateless;
 
 @Stateless
 public class BonjourLocalEJB
-{	
-	public String bonjourLocal()
-	{
-		return "Hello Local";
-	}
+{
+    public String bonjourLocal()
+    {
+        return "Bonjour Local";
+    }
 }

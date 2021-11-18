@@ -1,0 +1,14 @@
+/* AUTOMATICALLY GENERATED ON Thu Nov 18 10:04:52 CET 2021*/
+/* DO NOT EDIT */
+
+grant {
+  permission javax.security.jacc.EJBMethodPermission "BonjourEJB", "bonjourDistant,Local,";
+  permission javax.security.jacc.EJBMethodPermission "BonjourEJB", "bonjourDistant,Remote,";
+  permission javax.security.jacc.EJBMethodPermission "BonjourLocalEJB", "bonjourLocal,Local,";
+};
+
+grant      principal * * {
+  permission javax.security.jacc.EJBRoleRefPermission "BonjourEJB", "**";
+  permission javax.security.jacc.EJBRoleRefPermission "BonjourLocalEJB", "**";
+};
+

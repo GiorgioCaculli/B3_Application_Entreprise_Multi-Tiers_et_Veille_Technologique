@@ -5,5 +5,5 @@ import javax.ejb.Remote;
 @Remote
 public interface IBonjourRemoteEJB
 {
-	String bonjourDistant();
+    String bonjourDistant();
 }

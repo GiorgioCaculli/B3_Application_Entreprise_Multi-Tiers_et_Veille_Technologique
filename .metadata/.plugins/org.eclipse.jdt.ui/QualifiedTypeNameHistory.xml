@@ -42,4 +42,11 @@
     <fullyQualifiedTypeName name="javax.persistence.NoResultException"/>
     <fullyQualifiedTypeName name="be.helha.aemt.dao.UtilisateurDAO"/>
     <fullyQualifiedTypeName name="be.helha.aemt.entities.Utilisateur"/>
+    <fullyQualifiedTypeName name="javax.naming.InitialContext"/>
+    <fullyQualifiedTypeName name="javax.ejb.Remote"/>
+    <fullyQualifiedTypeName name="javax.ejb.Stateless"/>
+    <fullyQualifiedTypeName name="be.helha.aemt.ejb.IBonjourRemoteEJB"/>
+    <fullyQualifiedTypeName name="be.helha.aemt.ejb.BonjourLocalEJB"/>
+    <fullyQualifiedTypeName name="javax.ejb.LocalBean"/>
+    <fullyQualifiedTypeName name="javax.ejb.EJB"/>
 </qualifiedTypeNameHistroy>

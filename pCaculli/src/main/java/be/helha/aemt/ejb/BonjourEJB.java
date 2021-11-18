@@ -1,15 +1,18 @@
 package be.helha.aemt.ejb;
 
+import javax.ejb.EJB;
+import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 
 @Stateless
+@LocalBean
 public class BonjourEJB implements IBonjourRemoteEJB
 {
-	private BonjourLocalEJB bonjourLocalEJB;
+    @EJB
+    private BonjourLocalEJB bonjourLocalEJB;
 
-	@Override
-	public String bonjourDistant()
-	{
-		return bonjourLocalEJB.bonjourLocal();
-	}
+    public String bonjourDistant()
+    {
+        return bonjourLocalEJB.bonjourLocal();
+    }
 }
