@@ -118,7 +118,7 @@ public class UtilisateurDAO extends DAO< Utilisateur >
         utilisateur.setCommandes( commandes );
         em.persist( utilisateur );
         submit();
-        em.detach( utilisateur ); /* En RESSOURCE_LOCAL */
+        //em.detach( utilisateur ); /* En RESSOURCE_LOCAL */
         return utilisateur;
     }
 

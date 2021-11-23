@@ -16,7 +16,7 @@ import be.helha.aemt.entities.Utilisateur;
 @LocalBean
 public class DAO< T > implements IDAO< T >
 {
-    @PersistenceContext
+    @PersistenceContext(unitName = "pUUtilisateur")
     protected EntityManager em;
     
     public DAO()
