@@ -46,12 +46,20 @@
     <connector-resource pool-name="jms/__defaultConnectionFactory-Connection-Pool" object-type="system-all-req" jndi-name="jms/__defaultConnectionFactory"></connector-resource>
     <context-service object-type="system-all" jndi-name="concurrent/__defaultContextService"></context-service>
     <managed-thread-factory object-type="system-all" jndi-name="concurrent/__defaultManagedThreadFactory"></managed-thread-factory>
+    <jdbc-connection-pool driver-classname="com.mysql.jdbc.Driver" name="visiteur2021" res-type="java.sql.Driver">
+      <property name="dataBase" value="dbutilisateurs2021"></property>
+      <property name="portNumber" value="3306"></property>
+      <property name="password" value="test"></property>
+      <property name="user" value="test"></property>
+      <property name="url" value="jdbc:mysql://localhost:3306/dbutilisateurs2021"></property>
+    </jdbc-connection-pool>
+    <jdbc-resource pool-name="visiteur2021" jndi-name="jdbc/visiteur2021"></jdbc-resource>
   </resources>
   <servers>
     <server config-ref="server-config" name="server">
       <application-ref ref="__admingui" virtual-servers="__asadmin"></application-ref>
-      <application-ref ref="pCaculliJTA" virtual-servers="server"></application-ref>
       <application-ref ref="pCaculli" virtual-servers="server"></application-ref>
+      <application-ref ref="pCaculliJTA" virtual-servers="server"></application-ref>
       <resource-ref ref="jdbc/__TimerPool"></resource-ref>
       <resource-ref ref="jdbc/__default"></resource-ref>
       <resource-ref ref="concurrent/__defaultManagedExecutorService"></resource-ref>
@@ -59,6 +67,7 @@
       <resource-ref ref="jms/__defaultConnectionFactory"></resource-ref>
       <resource-ref ref="concurrent/__defaultContextService"></resource-ref>
       <resource-ref ref="concurrent/__defaultManagedThreadFactory"></resource-ref>
+      <resource-ref ref="jdbc/visiteur2021"></resource-ref>
     </server>
   </servers>
   <nodes>
@@ -564,22 +573,7 @@
   <deployment-groups></deployment-groups>
   <clusters></clusters>
   <applications>
-    <application context-root="/pCaculliJTA" deployment-time="698" object-type="user" directory-deployed="true" name="pCaculliJTA" time-deployed="1637149406359" location="${com.sun.aas.instanceRootURI}/eclipseApps/pCaculliJTA/">
-      <property name="archiveType" value="war"></property>
-      <property name="cdiDevModeEnabled" value="false"></property>
-      <property name="defaultAppName" value="pCaculliJTA"></property>
-      <property name="appLocation" value="${com.sun.aas.instanceRootURI}/eclipseApps/pCaculliJTA/"></property>
-      <property name="keepstate" value="true"></property>
-      <property name="org.glassfish.ejb.container.application_unique_id" value="107292221727703040"></property>
-      <module name="pCaculliJTA">
-        <engine sniffer="cdi"></engine>
-        <engine sniffer="ejb"></engine>
-        <engine sniffer="security"></engine>
-        <engine sniffer="config"></engine>
-        <engine sniffer="web"></engine>
-      </module>
-    </application>
-    <application deployment-time="667" context-root="/pCaculli" object-type="user" name="pCaculli" directory-deployed="true" location="${com.sun.aas.instanceRootURI}/eclipseApps/pCaculli/" time-deployed="1637226292124">
+    <application context-root="/pCaculli" deployment-time="911" object-type="user" directory-deployed="true" name="pCaculli" time-deployed="1637662155263" location="${com.sun.aas.instanceRootURI}/eclipseApps/pCaculli/">
       <property name="org.glassfish.ejb.container.application_unique_id" value="107297259882479616"></property>
       <property name="archiveType" value="war"></property>
       <property name="cdiDevModeEnabled" value="false"></property>
@@ -592,6 +586,23 @@
         <engine sniffer="ejb"></engine>
         <engine sniffer="security"></engine>
         <engine sniffer="config"></engine>
+        <engine sniffer="web"></engine>
+      </module>
+    </application>
+    <application deployment-time="1712" context-root="/pCaculliJTA" object-type="user" name="pCaculliJTA" directory-deployed="true" location="${com.sun.aas.instanceRootURI}/eclipseApps/pCaculliJTA/" time-deployed="1637668290479">
+      <property name="org.glassfish.ejb.container.application_unique_id" value="107325915685781504"></property>
+      <property name="archiveType" value="war"></property>
+      <property name="cdiDevModeEnabled" value="false"></property>
+      <property name="defaultAppName" value="pCaculliJTA"></property>
+      <property name="appLocation" value="${com.sun.aas.instanceRootURI}/eclipseApps/pCaculliJTA/"></property>
+      <property name="org.glassfish.ejb.startup.keepstate" value="true"></property>
+      <property name="keepstate" value="true"></property>
+      <module name="pCaculliJTA">
+        <engine sniffer="cdi"></engine>
+        <engine sniffer="ejb"></engine>
+        <engine sniffer="security"></engine>
+        <engine sniffer="config"></engine>
+        <engine sniffer="jpa"></engine>
         <engine sniffer="web"></engine>
       </module>
     </application>
