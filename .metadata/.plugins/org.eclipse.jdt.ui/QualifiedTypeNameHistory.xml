@@ -21,7 +21,6 @@
     <fullyQualifiedTypeName name="org.eclipse.persistence.sessions.coordination.Command"/>
     <fullyQualifiedTypeName name="java.time.LocalDate"/>
     <fullyQualifiedTypeName name="javax.persistence.ManyToMany"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
     <fullyQualifiedTypeName name="java.util.Random"/>
     <fullyQualifiedTypeName name="java.text.DecimalFormat"/>
@@ -29,10 +28,8 @@
     <fullyQualifiedTypeName name="javax.persistence.FetchType"/>
     <fullyQualifiedTypeName name="javax.persistence.Query"/>
     <fullyQualifiedTypeName name="be.helha.aemt.dao.IDAO"/>
-    <fullyQualifiedTypeName name="be.helha.aemt.entities.Adresse"/>
     <fullyQualifiedTypeName name="be.helha.aemt.dao.AdresseDAO"/>
     <fullyQualifiedTypeName name="be.helha.aemt.dao.DAO"/>
-    <fullyQualifiedTypeName name="be.helha.aemt.entities.Article"/>
     <fullyQualifiedTypeName name="be.helha.aemt.dao.ArticleDAO"/>
     <fullyQualifiedTypeName name="java.util.Collection"/>
     <fullyQualifiedTypeName name="java.util.Collections"/>
@@ -41,12 +38,17 @@
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="javax.persistence.NoResultException"/>
     <fullyQualifiedTypeName name="be.helha.aemt.dao.UtilisateurDAO"/>
-    <fullyQualifiedTypeName name="be.helha.aemt.entities.Utilisateur"/>
     <fullyQualifiedTypeName name="javax.naming.InitialContext"/>
     <fullyQualifiedTypeName name="javax.ejb.Remote"/>
     <fullyQualifiedTypeName name="javax.ejb.Stateless"/>
     <fullyQualifiedTypeName name="be.helha.aemt.ejb.IBonjourRemoteEJB"/>
     <fullyQualifiedTypeName name="be.helha.aemt.ejb.BonjourLocalEJB"/>
-    <fullyQualifiedTypeName name="javax.ejb.LocalBean"/>
     <fullyQualifiedTypeName name="javax.ejb.EJB"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="be.helha.aemt.entities.Utilisateur"/>
+    <fullyQualifiedTypeName name="be.helha.aemt.entities.Adresse"/>
+    <fullyQualifiedTypeName name="javax.ejb.LocalBean"/>
+    <fullyQualifiedTypeName name="javax.persistence.PersistenceContext"/>
+    <fullyQualifiedTypeName name="java.io.Serializable"/>
+    <fullyQualifiedTypeName name="be.helha.aemt.entities.Article"/>
 </qualifiedTypeNameHistroy>
