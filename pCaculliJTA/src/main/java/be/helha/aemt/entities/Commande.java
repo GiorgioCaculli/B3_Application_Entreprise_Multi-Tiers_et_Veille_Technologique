@@ -1,5 +1,6 @@
 package be.helha.aemt.entities;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +14,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 
 @Entity
-public class Commande
+public class Commande implements Serializable
 {
     @Id
     @GeneratedValue( strategy = GenerationType.IDENTITY )

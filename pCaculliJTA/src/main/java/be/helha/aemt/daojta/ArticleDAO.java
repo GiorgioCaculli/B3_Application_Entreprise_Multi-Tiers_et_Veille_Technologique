@@ -6,6 +6,7 @@ import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import javax.persistence.NoResultException;
 import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 
 import be.helha.aemt.entities.Adresse;
 import be.helha.aemt.entities.Article;
@@ -58,8 +59,7 @@ public class ArticleDAO extends DAO< Article >
             return null;
         }
         em.persist( article );
-        submit();
-        em.detach( article ); /* En RESSOURCE_LOCAL */
+        /*em.detach( article );*/ /* En RESSOURCE_LOCAL */
         return article;
     }
 
@@ -73,7 +73,7 @@ public class ArticleDAO extends DAO< Article >
         Article article = em.find( Article.class, id );
         if( article != null )
         {
-            em.detach( article );
+            /*em.detach( article );*/
         }
         return article;
     }
@@ -95,8 +95,11 @@ public class ArticleDAO extends DAO< Article >
     @Override
     public List< Article > findAll()
     {
-        // TODO Auto-generated method stub
-        return null;
+        String loginQuery = "SELECT a FROM Article a";
+        TypedQuery< Article > query = em.createQuery(loginQuery, Article.class );
+        List< Article > resultAdresse = query.getResultList();
+       
+        return resultAdresse;
     }
 
 }

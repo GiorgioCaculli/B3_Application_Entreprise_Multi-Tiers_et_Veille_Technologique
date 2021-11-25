@@ -58,7 +58,6 @@
   <servers>
     <server config-ref="server-config" name="server">
       <application-ref ref="__admingui" virtual-servers="__asadmin"></application-ref>
-      <application-ref ref="pCaculli" virtual-servers="server"></application-ref>
       <application-ref ref="pCaculliJTA" virtual-servers="server"></application-ref>
       <resource-ref ref="jdbc/__TimerPool"></resource-ref>
       <resource-ref ref="jdbc/__default"></resource-ref>
@@ -573,26 +572,11 @@
   <deployment-groups></deployment-groups>
   <clusters></clusters>
   <applications>
-    <application context-root="/pCaculli" deployment-time="911" object-type="user" directory-deployed="true" name="pCaculli" time-deployed="1637662155263" location="${com.sun.aas.instanceRootURI}/eclipseApps/pCaculli/">
-      <property name="org.glassfish.ejb.container.application_unique_id" value="107297259882479616"></property>
+    <application deployment-time="599" context-root="/pCaculliJTA" object-type="user" name="pCaculliJTA" directory-deployed="true" location="${com.sun.aas.instanceRootURI}/eclipseApps/pCaculliJTA/" time-deployed="1637832237438">
+      <property name="org.glassfish.ejb.container.application_unique_id" value="107336878831173632"></property>
       <property name="archiveType" value="war"></property>
       <property name="cdiDevModeEnabled" value="false"></property>
-      <property name="defaultAppName" value="pCaculli"></property>
-      <property name="appLocation" value="${com.sun.aas.instanceRootURI}/eclipseApps/pCaculli/"></property>
-      <property name="org.glassfish.ejb.startup.keepstate" value="true"></property>
-      <property name="keepstate" value="true"></property>
-      <module name="pCaculli">
-        <engine sniffer="cdi"></engine>
-        <engine sniffer="ejb"></engine>
-        <engine sniffer="security"></engine>
-        <engine sniffer="config"></engine>
-        <engine sniffer="web"></engine>
-      </module>
-    </application>
-    <application deployment-time="1572" context-root="/pCaculliJTA" object-type="user" name="pCaculliJTA" directory-deployed="true" location="${com.sun.aas.instanceRootURI}/eclipseApps/pCaculliJTA/" time-deployed="1637668859498">
-      <property name="org.glassfish.ejb.container.application_unique_id" value="107325915685781504"></property>
-      <property name="archiveType" value="war"></property>
-      <property name="cdiDevModeEnabled" value="false"></property>
+      <property name="org.glassfish.persistence.app_name_property" value="pCaculliJTA"></property>
       <property name="defaultAppName" value="pCaculliJTA"></property>
       <property name="appLocation" value="${com.sun.aas.instanceRootURI}/eclipseApps/pCaculliJTA/"></property>
       <property name="org.glassfish.ejb.startup.keepstate" value="true"></property>

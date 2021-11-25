@@ -3,6 +3,7 @@ package be.helha.aemt.daojta;
 import java.util.Collections;
 import java.util.List;
 
+import javax.ejb.EJB;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import javax.persistence.NoResultException;
@@ -18,11 +19,11 @@ import be.helha.aemt.entities.Utilisateur;
 @LocalBean
 public class CommandeDAO extends DAO< Commande >
 {
+    @EJB
     private ArticleDAO articleDAO;
 
     public CommandeDAO()
     {
-        articleDAO = new ArticleDAO();
     }
     
     public List< Commande > findCommandesByUtilisateur( Utilisateur u )
@@ -35,7 +36,7 @@ public class CommandeDAO extends DAO< Commande >
         Query query = em.createQuery( loginQuery );
         query.setParameter( "login", u.getLogin() );
         List< Commande > resultAdresse = query.getResultList();
-        em.clear();
+        /*em.clear();*/
         return resultAdresse;
     }
     
@@ -49,7 +50,7 @@ public class CommandeDAO extends DAO< Commande >
         Query query = em.createQuery( loginQuery );
         query.setParameter( "libelle", a.getLibelle() );
         List< Commande > resultAdresse = query.getResultList();
-        em.clear();
+        /*em.clear();*/
         return resultAdresse;
     }
     
@@ -63,7 +64,7 @@ public class CommandeDAO extends DAO< Commande >
         Query query = em.createQuery( loginQuery );
         query.setParameter( "login", u.getLogin() );
         List< Article > articles = query.getResultList();
-        em.clear();
+        /*em.clear();*/
         return articles;
     }
     
@@ -77,7 +78,7 @@ public class CommandeDAO extends DAO< Commande >
         Query query = em.createQuery( loginQuery );
         query.setParameter( "codePostal", codePostal );
         List< Article > articles = query.getResultList();
-        em.clear();
+        /*em.clear();*/
         return articles;
     }
 
@@ -101,8 +102,7 @@ public class CommandeDAO extends DAO< Commande >
         	commande.ajouterArticle( articleDAO.findArticleByLibelle( a ) );
         }
         em.persist( commande );
-        submit();
-        em.clear();
+        /*em.clear();*/
         return commande;
     }
 

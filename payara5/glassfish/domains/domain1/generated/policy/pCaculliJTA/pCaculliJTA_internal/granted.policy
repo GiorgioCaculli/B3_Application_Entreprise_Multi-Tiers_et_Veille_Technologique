@@ -1,17 +1,15 @@
-/* AUTOMATICALLY GENERATED ON Tue Nov 23 13:00:59 CET 2021*/
+/* AUTOMATICALLY GENERATED ON Thu Nov 25 10:23:57 CET 2021*/
 /* DO NOT EDIT */
 
 grant {
-  permission javax.security.jacc.EJBMethodPermission "ArticleDAO", "close,Local,";
   permission javax.security.jacc.EJBMethodPermission "ArticleDAO", "findArticleByLibelle,Local,be.helha.aemt.entities.Article";
   permission javax.security.jacc.EJBMethodPermission "AdresseDAO", "findAll,Local,";
   permission javax.security.jacc.EJBMethodPermission "DAO", "update,Local,java.lang.Object,java.lang.Object";
   permission javax.security.jacc.EJBMethodPermission "AdresseDAO", "create,Local,be.helha.aemt.entities.Adresse";
   permission javax.security.jacc.EJBMethodPermission "AdresseDAO", "read,Local,java.lang.Integer";
+  permission javax.security.jacc.EJBMethodPermission "GestionUtilisateurEJB", "createUtilisateur,Local,be.helha.aemt.entities.Utilisateur";
   permission javax.security.jacc.EJBMethodPermission "CommandeDAO", "delete,Local,java.lang.Object";
-  permission javax.security.jacc.EJBMethodPermission "DAO", "close,Local,";
   permission javax.security.jacc.EJBMethodPermission "UtilisateurDAO", "read,Local,java.lang.Integer";
-  permission javax.security.jacc.EJBMethodPermission "CommandeDAO", "close,Local,";
   permission javax.security.jacc.EJBMethodPermission "UtilisateurDAO", "findByLogin,Local,be.helha.aemt.entities.Utilisateur";
   permission javax.security.jacc.EJBMethodPermission "UtilisateurDAO", "create,Local,be.helha.aemt.entities.Utilisateur";
   permission javax.security.jacc.EJBMethodPermission "ArticleDAO", "delete,Local,java.lang.Object";
@@ -19,48 +17,51 @@ grant {
   permission javax.security.jacc.EJBMethodPermission "DAO", "findAll,Local,";
   permission javax.security.jacc.EJBMethodPermission "ArticleDAO", "findAll,Local,";
   permission javax.security.jacc.EJBMethodPermission "ArticleDAO", "create,Local,be.helha.aemt.entities.Article";
-  permission javax.security.jacc.EJBMethodPermission "AdresseDAO", "close,Local,";
+  permission javax.security.jacc.EJBMethodPermission "GestionUtilisateurEJB", "createArticle,Local,be.helha.aemt.entities.Article";
   permission javax.security.jacc.EJBMethodPermission "UtilisateurDAO", "delete,Local,java.lang.Object";
   permission javax.security.jacc.EJBMethodPermission "DAO", "delete,Local,java.lang.Object";
   permission javax.security.jacc.EJBMethodPermission "VisiteurDAO", "findByIPAddress,Local,be.helha.aemt.entities.Visiteur";
-  permission javax.security.jacc.EJBMethodPermission "CommandeDAO", "update,Local,be.helha.aemt.entities.Commande,be.helha.aemt.entities.Commande";
   permission javax.security.jacc.EJBMethodPermission "AdresseDAO", "delete,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "CommandeDAO", "update,Local,be.helha.aemt.entities.Commande,be.helha.aemt.entities.Commande";
   permission javax.security.jacc.EJBMethodPermission "VisiteurDAO", "update,Local,java.lang.Object,java.lang.Object";
-  permission javax.security.jacc.EJBMethodPermission "CommandeDAO", "findArticlesByCodePostal,Local,int";
   permission javax.security.jacc.EJBMethodPermission "VisiteurDAO", "update,Local,be.helha.aemt.entities.Visiteur,be.helha.aemt.entities.Visiteur";
+  permission javax.security.jacc.EJBMethodPermission "CommandeDAO", "findArticlesByCodePostal,Local,int";
   permission javax.security.jacc.EJBMethodPermission "VisiteurDAO", "read,Local,java.lang.Integer";
   permission javax.security.jacc.EJBMethodPermission "ArticleDAO", "delete,Local,be.helha.aemt.entities.Article";
   permission javax.security.jacc.EJBMethodPermission "CommandeDAO", "create,Local,be.helha.aemt.entities.Commande";
   permission javax.security.jacc.EJBMethodPermission "UtilisateurDAO", "findAll,Local,";
+  permission javax.security.jacc.EJBMethodPermission "GestionUtilisateurEJB", "createArticle,Remote,be.helha.aemt.entities.Article";
   permission javax.security.jacc.EJBMethodPermission "UtilisateurDAO", "create,Local,java.lang.Object";
   permission javax.security.jacc.EJBMethodPermission "VisiteurDAO", "delete,Local,be.helha.aemt.entities.Visiteur";
   permission javax.security.jacc.EJBMethodPermission "AdresseDAO", "update,Local,be.helha.aemt.entities.Adresse,be.helha.aemt.entities.Adresse";
   permission javax.security.jacc.EJBMethodPermission "VisiteurDAO", "create,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "GestionUtilisateurEJB", "findAllUtilisateurs,Local,";
   permission javax.security.jacc.EJBMethodPermission "UtilisateurDAO", "findByAddress,Local,be.helha.aemt.entities.Adresse";
   permission javax.security.jacc.EJBMethodPermission "ArticleDAO", "update,Local,be.helha.aemt.entities.Article,be.helha.aemt.entities.Article";
+  permission javax.security.jacc.EJBMethodPermission "GestionUtilisateurEJB", "createUtilisateur,Remote,be.helha.aemt.entities.Utilisateur";
   permission javax.security.jacc.EJBMethodPermission "CommandeDAO", "update,Local,java.lang.Object,java.lang.Object";
   permission javax.security.jacc.EJBMethodPermission "AdresseDAO", "delete,Local,be.helha.aemt.entities.Adresse";
-  permission javax.security.jacc.EJBMethodPermission "UtilisateurDAO", "close,Local,";
   permission javax.security.jacc.EJBMethodPermission "AdresseDAO", "create,Local,java.lang.Object";
-  permission javax.security.jacc.EJBMethodPermission "CommandeDAO", "findAll,Local,";
   permission javax.security.jacc.EJBMethodPermission "VisiteurDAO", "create,Local,be.helha.aemt.entities.Visiteur";
+  permission javax.security.jacc.EJBMethodPermission "CommandeDAO", "findAll,Local,";
   permission javax.security.jacc.EJBMethodPermission "ArticleDAO", "read,Local,java.lang.Integer";
   permission javax.security.jacc.EJBMethodPermission "AdresseDAO", "findAdresseByUtilisateur,Local,be.helha.aemt.entities.Utilisateur";
   permission javax.security.jacc.EJBMethodPermission "UtilisateurDAO", "findByPostalCode,Local,int";
   permission javax.security.jacc.EJBMethodPermission "ArticleDAO", "update,Local,java.lang.Object,java.lang.Object";
   permission javax.security.jacc.EJBMethodPermission "UtilisateurDAO", "delete,Local,be.helha.aemt.entities.Utilisateur";
   permission javax.security.jacc.EJBMethodPermission "CommandeDAO", "delete,Local,be.helha.aemt.entities.Commande";
-  permission javax.security.jacc.EJBMethodPermission "GestionUtilisateurEJB", "init,Remote,";
-  permission javax.security.jacc.EJBMethodPermission "VisiteurDAO", "close,Local,";
-  permission javax.security.jacc.EJBMethodPermission "CommandeDAO", "findCommandesByUtilisateur,Local,be.helha.aemt.entities.Utilisateur";
+  permission javax.security.jacc.EJBMethodPermission "GestionUtilisateurEJB", "findAllArticles,Local,";
   permission javax.security.jacc.EJBMethodPermission "VisiteurDAO", "findAll,Local,";
+  permission javax.security.jacc.EJBMethodPermission "CommandeDAO", "findCommandesByUtilisateur,Local,be.helha.aemt.entities.Utilisateur";
   permission javax.security.jacc.EJBMethodPermission "DAO", "read,Local,java.lang.Integer";
   permission javax.security.jacc.EJBMethodPermission "CommandeDAO", "findCommandeByArticle,Local,be.helha.aemt.entities.Article";
   permission javax.security.jacc.EJBMethodPermission "UtilisateurDAO", "update,Local,java.lang.Object,java.lang.Object";
   permission javax.security.jacc.EJBMethodPermission "CommandeDAO", "create,Local,java.lang.Object";
   permission javax.security.jacc.EJBMethodPermission "AdresseDAO", "findByRueNumeroCodePostalVille,Local,be.helha.aemt.entities.Adresse";
   permission javax.security.jacc.EJBMethodPermission "AdresseDAO", "update,Local,java.lang.Object,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "GestionUtilisateurEJB", "findAllUtilisateurs,Remote,";
   permission javax.security.jacc.EJBMethodPermission "UtilisateurDAO", "update,Local,be.helha.aemt.entities.Utilisateur,be.helha.aemt.entities.Utilisateur";
+  permission javax.security.jacc.EJBMethodPermission "GestionUtilisateurEJB", "findAllArticles,Remote,";
   permission javax.security.jacc.EJBMethodPermission "DAO", "create,Local,java.lang.Object";
   permission javax.security.jacc.EJBMethodPermission "CommandeDAO", "findArticlesByUtilisateurLogin,Local,be.helha.aemt.entities.Utilisateur";
   permission javax.security.jacc.EJBMethodPermission "VisiteurDAO", "delete,Local,java.lang.Object";
@@ -68,12 +69,12 @@ grant {
 };
 
 grant      principal * * {
-  permission javax.security.jacc.EJBRoleRefPermission "GestionUtilisateurEJB", "**";
   permission javax.security.jacc.EJBRoleRefPermission "VisiteurDAO", "**";
+  permission javax.security.jacc.EJBRoleRefPermission "GestionUtilisateurEJB", "**";
   permission javax.security.jacc.EJBRoleRefPermission "ArticleDAO", "**";
   permission javax.security.jacc.EJBRoleRefPermission "UtilisateurDAO", "**";
   permission javax.security.jacc.EJBRoleRefPermission "AdresseDAO", "**";
-  permission javax.security.jacc.EJBRoleRefPermission "CommandeDAO", "**";
   permission javax.security.jacc.EJBRoleRefPermission "DAO", "**";
+  permission javax.security.jacc.EJBRoleRefPermission "CommandeDAO", "**";
 };
 

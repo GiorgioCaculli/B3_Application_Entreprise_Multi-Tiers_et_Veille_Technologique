@@ -40,8 +40,7 @@ public class VisiteurDAO extends DAO< Visiteur >
 			return null;
 		}
         em.persist( visiteur );
-        submit();
-        em.detach( visiteur ); /* En RESSOURCE_LOCAL */
+        /*em.detach( visiteur );*/ /* En RESSOURCE_LOCAL */
         return visiteur;
 	}
 
@@ -69,7 +68,7 @@ public class VisiteurDAO extends DAO< Visiteur >
         String loginQuery = "SELECT v FROM Visiteur v";
         TypedQuery< Visiteur > query = em.createQuery( loginQuery, Visiteur.class );
         List< Visiteur > resultAdresse = query.getResultList();
-        em.clear();
+        /*em.clear();*/
         return resultAdresse;
 	}
 

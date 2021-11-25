@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.ejb.EJB;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import javax.persistence.NoResultException;
@@ -20,8 +21,11 @@ import be.helha.aemt.entities.Visiteur;
 @LocalBean
 public class UtilisateurDAO extends DAO< Utilisateur >
 {
+    @EJB
     private AdresseDAO adresseDAO;
+    @EJB
     private ArticleDAO articleDAO;
+    @EJB
     private CommandeDAO commandeDAO;
     
     /* 
@@ -30,9 +34,6 @@ public class UtilisateurDAO extends DAO< Utilisateur >
      */
     public UtilisateurDAO()
     {
-        adresseDAO = new AdresseDAO();
-        articleDAO = new ArticleDAO();
-        commandeDAO = new CommandeDAO();
     }
     
     public Utilisateur findByLogin( Utilisateur u )
@@ -64,7 +65,7 @@ public class UtilisateurDAO extends DAO< Utilisateur >
         query.setParameter( "ville", a.getVille() );
         query.setParameter( "codePostal", a.getCodePostal() );
         List< Utilisateur > resultAdresse = query.getResultList();
-        em.clear();
+        /*em.clear();*/
         return resultAdresse;
     }
     
@@ -78,7 +79,7 @@ public class UtilisateurDAO extends DAO< Utilisateur >
         Query query = em.createQuery( loginQuery );
         query.setParameter( "codePostal", postalCode );
         List< Utilisateur > resultCodePostal = query.getResultList();
-        em.clear();
+        /*em.clear();*/
         return resultCodePostal;
     }
 
@@ -117,8 +118,7 @@ public class UtilisateurDAO extends DAO< Utilisateur >
         commandes.add( commande );
         utilisateur.setCommandes( commandes );
         em.persist( utilisateur );
-        submit();
-        //em.detach( utilisateur ); /* En RESSOURCE_LOCAL */
+        /*em.detach( utilisateur );*/ /* En RESSOURCE_LOCAL */
         return utilisateur;
     }
 
@@ -132,7 +132,7 @@ public class UtilisateurDAO extends DAO< Utilisateur >
         Utilisateur utilisateur = em.find( Utilisateur.class, id );
         if( utilisateur != null )
         {
-            em.detach( utilisateur );
+            /*em.detach( utilisateur );*/
         }
         return utilisateur;
     }
@@ -157,8 +157,7 @@ public class UtilisateurDAO extends DAO< Utilisateur >
         tmp.setPassword( utilisateur2.getPassword() );
         tmp.setEmail( utilisateur2.getEmail() );
         em.merge( tmp );
-        submit();
-        em.detach( tmp );
+        /*em.detach( tmp );*/
         return tmp;
     }
 
@@ -175,7 +174,6 @@ public class UtilisateurDAO extends DAO< Utilisateur >
         }
         Utilisateur tmp = em.find( Utilisateur.class, utilisateur.getId() );
         em.remove( tmp );
-        submit();
         /* em.detach( tmp ); PAS NECESSAIRE CAR remove gere LE detach */
         return tmp;
     }
@@ -184,9 +182,9 @@ public class UtilisateurDAO extends DAO< Utilisateur >
     public List< Utilisateur > findAll()
     {
         String loginQuery = "SELECT u FROM Utilisateur u";
-        TypedQuery< Utilisateur > query = em.createQuery( loginQuery, Utilisateur.class );
+        TypedQuery< Utilisateur > query = em.createQuery(loginQuery, Utilisateur.class );
         List< Utilisateur > resultAdresse = query.getResultList();
-        em.clear();
+       
         return resultAdresse;
     }
 }

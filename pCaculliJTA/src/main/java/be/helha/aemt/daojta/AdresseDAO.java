@@ -58,7 +58,7 @@ public class AdresseDAO extends DAO< Adresse >
         catch( NoResultException nre )
         {
         }
-        em.clear();
+        /*em.clear();*/
         return resultAdresse;
     }
 
@@ -78,8 +78,7 @@ public class AdresseDAO extends DAO< Adresse >
             return null;
         }
         em.persist( adresse );
-        submit();
-        em.detach( adresse ); /* En RESSOURCE_LOCAL */
+        /*em.detach( adresse );*/ /* En RESSOURCE_LOCAL */
         return adresse;
     }
 
@@ -93,7 +92,7 @@ public class AdresseDAO extends DAO< Adresse >
         Adresse adresse = em.find( Adresse.class, id );
         if( adresse != null )
         {
-            em.detach( adresse );
+            /*em.detach( adresse );*/
         }
         return adresse;
     }

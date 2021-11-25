@@ -5,12 +5,8 @@ import java.util.List;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.EntityTransaction;
-import javax.persistence.Persistence;
 import javax.persistence.PersistenceContext;
 
-import be.helha.aemt.entities.Utilisateur;
 
 @Stateless
 @LocalBean
@@ -21,16 +17,6 @@ public class DAO< T > implements IDAO< T >
     
     public DAO()
     {
-        em = Persistence.createEntityManagerFactory( "pUUtilisateur" ).createEntityManager();
-    }
-    
-    protected void submit()
-    {
-    }
-
-    public void close()
-    {
-        em.close();
     }
 
     @Override

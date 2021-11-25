@@ -1,5 +1,6 @@
 package be.helha.aemt.entities;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,7 +18,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.UniqueConstraint;
 
 @Entity
-public class Utilisateur extends Visiteur
+public class Utilisateur extends Visiteur implements Serializable
 {
 	/*
     @Id
