@@ -51,4 +51,6 @@
     <fullyQualifiedTypeName name="javax.persistence.PersistenceContext"/>
     <fullyQualifiedTypeName name="java.io.Serializable"/>
     <fullyQualifiedTypeName name="be.helha.aemt.entities.Article"/>
+    <fullyQualifiedTypeName name="javax.inject.Named"/>
+    <fullyQualifiedTypeName name="javax.enterprise.context.RequestScoped"/>
 </qualifiedTypeNameHistroy>

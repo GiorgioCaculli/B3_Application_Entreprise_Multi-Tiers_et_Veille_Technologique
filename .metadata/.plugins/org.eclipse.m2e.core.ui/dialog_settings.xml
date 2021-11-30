@@ -44,12 +44,13 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
-			<item value="it.caculli.gzc"/>
 			<item value="be.helha.aemt"/>
+			<item value="it.caculli.gzc"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="pCaculliWeb"/>
 			<item value="TestProject"/>
 			<item value="pUtilisateur"/>
 		</list>
