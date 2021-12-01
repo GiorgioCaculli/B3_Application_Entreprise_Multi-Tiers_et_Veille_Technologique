@@ -66,7 +66,7 @@
 	</section>
 	<section name="DialogBounds_GetterSetterTreeSelectionDialog">
 		<item key="DIALOG_X_ORIGIN" value="679"/>
-		<item key="DIALOG_Y_ORIGIN" value="180"/>
+		<item key="DIALOG_Y_ORIGIN" value="199"/>
 		<item key="DIALOG_WIDTH" value="566"/>
 		<item key="DIALOG_HEIGHT" value="708"/>
 		<item key="DIALOG_FONT_NAME" value="1|Sans|10.0|0|GTK|1|"/>

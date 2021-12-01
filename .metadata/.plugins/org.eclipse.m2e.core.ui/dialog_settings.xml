@@ -50,6 +50,7 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="pCaculliPublication"/>
 			<item value="pCaculliWeb"/>
 			<item value="TestProject"/>
 			<item value="pUtilisateur"/>
