@@ -9,7 +9,6 @@
     <fullyQualifiedTypeName name="javax.persistence.EntityTransaction"/>
     <fullyQualifiedTypeName name="javax.persistence.JoinColumn"/>
     <fullyQualifiedTypeName name="be.helha.aemt.entities.Compte"/>
-    <fullyQualifiedTypeName name="javax.persistence.Entity"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="javax.persistence.Id"/>
     <fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
@@ -29,7 +28,6 @@
     <fullyQualifiedTypeName name="javax.persistence.Query"/>
     <fullyQualifiedTypeName name="be.helha.aemt.dao.IDAO"/>
     <fullyQualifiedTypeName name="be.helha.aemt.dao.AdresseDAO"/>
-    <fullyQualifiedTypeName name="be.helha.aemt.dao.DAO"/>
     <fullyQualifiedTypeName name="be.helha.aemt.dao.ArticleDAO"/>
     <fullyQualifiedTypeName name="java.util.Collection"/>
     <fullyQualifiedTypeName name="java.util.Collections"/>
@@ -40,19 +38,22 @@
     <fullyQualifiedTypeName name="be.helha.aemt.dao.UtilisateurDAO"/>
     <fullyQualifiedTypeName name="javax.naming.InitialContext"/>
     <fullyQualifiedTypeName name="javax.ejb.Remote"/>
-    <fullyQualifiedTypeName name="javax.ejb.Stateless"/>
     <fullyQualifiedTypeName name="be.helha.aemt.ejb.IBonjourRemoteEJB"/>
     <fullyQualifiedTypeName name="be.helha.aemt.ejb.BonjourLocalEJB"/>
     <fullyQualifiedTypeName name="javax.ejb.EJB"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="be.helha.aemt.entities.Utilisateur"/>
     <fullyQualifiedTypeName name="be.helha.aemt.entities.Adresse"/>
-    <fullyQualifiedTypeName name="javax.ejb.LocalBean"/>
     <fullyQualifiedTypeName name="javax.persistence.PersistenceContext"/>
     <fullyQualifiedTypeName name="be.helha.aemt.entities.Article"/>
-    <fullyQualifiedTypeName name="javax.inject.Named"/>
     <fullyQualifiedTypeName name="javax.enterprise.context.RequestScoped"/>
     <fullyQualifiedTypeName name="javax.inject.Inject"/>
-    <fullyQualifiedTypeName name="javax.enterprise.context.SessionScoped"/>
     <fullyQualifiedTypeName name="java.io.Serializable"/>
+    <fullyQualifiedTypeName name="javax.inject.Named"/>
+    <fullyQualifiedTypeName name="javax.enterprise.context.SessionScoped"/>
+    <fullyQualifiedTypeName name="javax.persistence.Entity"/>
+    <fullyQualifiedTypeName name="javax.ejb.Stateless"/>
+    <fullyQualifiedTypeName name="javax.ejb.LocalBean"/>
+    <fullyQualifiedTypeName name="be.helha.aemt.dao.DAO"/>
+    <fullyQualifiedTypeName name="be.helha.aemt.entities.Publication"/>
 </qualifiedTypeNameHistroy>

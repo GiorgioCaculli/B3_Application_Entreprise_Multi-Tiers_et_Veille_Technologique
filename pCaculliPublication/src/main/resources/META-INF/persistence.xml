@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+    xmlns="http://xmlns.jcp.org/xml/ns/persistence">
+
+
+    <!-- pU = Persistence Unit -->
+    <persistence-unit name="pUPublication"
+        transaction-type="JTA">
+
+        <class>be.helha.aemt.entities.Publication</class>
+
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        
+        <jta-data-source>jdbc/publication2021</jta-data-source>
+
+        <properties>
+        </properties>
+    </persistence-unit>
+
+</persistence>
