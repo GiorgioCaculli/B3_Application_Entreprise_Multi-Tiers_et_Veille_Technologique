@@ -1,0 +1,27 @@
+/* AUTOMATICALLY GENERATED ON Mon Dec 13 12:52:21 CET 2021*/
+/* DO NOT EDIT */
+
+grant {
+  permission javax.security.jacc.EJBMethodPermission "PublicationDAO", "delete,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "PublicationDAO", "create,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "PublicationDAO", "create,Local,be.helha.aemt.entities.Publication";
+  permission javax.security.jacc.EJBMethodPermission "DAO", "read,Local,java.lang.Integer";
+  permission javax.security.jacc.EJBMethodPermission "DAO", "update,Local,java.lang.Object,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "DAO", "delete,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "PublicationDAO", "read,Local,java.lang.Integer";
+  permission javax.security.jacc.EJBMethodPermission "PublicationEJB", "getAllPublications,Local,";
+  permission javax.security.jacc.EJBMethodPermission "PublicationDAO", "findAll,Local,";
+  permission javax.security.jacc.EJBMethodPermission "PublicationDAO", "delete,Local,be.helha.aemt.entities.Publication";
+  permission javax.security.jacc.EJBMethodPermission "DAO", "create,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "PublicationDAO", "update,Local,java.lang.Object,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "PublicationDAO", "update,Local,be.helha.aemt.entities.Publication,be.helha.aemt.entities.Publication";
+  permission javax.security.jacc.EJBMethodPermission "DAO", "findAll,Local,";
+  permission javax.security.jacc.EJBMethodPermission "PublicationDAO", "findPublicationByTitle,Local,be.helha.aemt.entities.Publication";
+};
+
+grant      principal * * {
+  permission javax.security.jacc.EJBRoleRefPermission "PublicationDAO", "**";
+  permission javax.security.jacc.EJBRoleRefPermission "PublicationEJB", "**";
+  permission javax.security.jacc.EJBRoleRefPermission "DAO", "**";
+};
+

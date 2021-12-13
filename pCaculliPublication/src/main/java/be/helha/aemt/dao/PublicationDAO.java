@@ -5,7 +5,10 @@ import java.util.List;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 
 import be.helha.aemt.entities.Publication;
 
@@ -13,19 +16,58 @@ import be.helha.aemt.entities.Publication;
 @LocalBean
 public class PublicationDAO extends DAO< Publication >
 {
+    public Publication findPublicationByTitle( Publication p )
+    {
+        if( p == null || p.getTitre() == null )
+        {
+            return null;
+        }
+        String loginQuery = "SELECT p FROM Publication p WHERE p.titre = :titre";
+        Query query = em.createQuery( loginQuery );
+        query.setParameter( "titre", p.getTitre() );
+        Publication resultPublication = null;
+        try
+        {
+            resultPublication = ( Publication ) query.getSingleResult();   
+        }
+        catch ( NoResultException nre )
+        {
+            nre.printStackTrace();
+        }
+        return resultPublication;
+    }
 
     @Override
-    public Publication create( Publication object )
+    public Publication create( Publication publication )
     {
-        // TODO Auto-generated method stub
-        return super.create( object );
+        if( findPublicationByTitle( publication ) != null )
+        {
+            return null;
+        }
+        if( publication == null )
+        {
+            return null;
+        }
+        if( publication.getTitre() == null )
+        {
+            return null;
+        }
+        em.persist( publication );
+        return super.create( publication );
     }
 
     @Override
     public Publication read( Integer id )
     {
-        // TODO Auto-generated method stub
-        return super.read( id );
+        if( id == null )
+        {
+            return null;
+        }
+        Publication publication = em.find( Publication.class, id );
+        if( publication != null )
+        {
+        }
+        return publication;
     }
 
     @Override
@@ -45,8 +87,11 @@ public class PublicationDAO extends DAO< Publication >
     @Override
     public List< Publication > findAll()
     {
-        // TODO Auto-generated method stub
-        return super.findAll();
+        String loginQuery = "SELECT p FROM Publication p";
+        TypedQuery< Publication > query = em.createQuery(loginQuery, Publication.class );
+        List< Publication > resultPublication = query.getResultList();
+       
+        return resultPublication;
     }
     
 }
