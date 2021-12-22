@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+.publicationTable
+{
+	width: 100%;
+}
+
+.publicationTableRowOdd,
+.publicationTableRowEven
+{
+	text-align: center;
+}
+
+.publicationTableRowOdd
+{
+	background-color: red;
+}
+
+.publicationTableRowEven
+{
+	background-color: blue;
+}

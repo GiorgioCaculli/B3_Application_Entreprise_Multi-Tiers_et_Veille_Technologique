@@ -24,4 +24,9 @@ public class PublicationEJB
     {
         return publicationDAO.findAll();
     }
+    
+    public Publication createPublication( String titre, int annee, double prix )
+    {
+        return publicationDAO.create( new Publication( titre, annee, prix ) );
+    }
 }

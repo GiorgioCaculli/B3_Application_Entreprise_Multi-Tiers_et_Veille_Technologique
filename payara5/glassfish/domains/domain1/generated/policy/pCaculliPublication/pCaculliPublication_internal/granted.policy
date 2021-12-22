@@ -1,9 +1,10 @@
-/* AUTOMATICALLY GENERATED ON Thu Dec 16 09:33:53 CET 2021*/
+/* AUTOMATICALLY GENERATED ON Wed Dec 22 12:58:09 CET 2021*/
 /* DO NOT EDIT */
 
 grant {
   permission javax.security.jacc.EJBMethodPermission "PublicationDAO", "delete,Local,java.lang.Object";
   permission javax.security.jacc.EJBMethodPermission "PublicationDAO", "create,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "PublicationEJB", "createPublication,Local,java.lang.String,int,double";
   permission javax.security.jacc.EJBMethodPermission "PublicationDAO", "create,Local,be.helha.aemt.entities.Publication";
   permission javax.security.jacc.EJBMethodPermission "DAO", "read,Local,java.lang.Integer";
   permission javax.security.jacc.EJBMethodPermission "DAO", "update,Local,java.lang.Object,java.lang.Object";
@@ -21,7 +22,7 @@ grant {
 
 grant      principal * * {
   permission javax.security.jacc.EJBRoleRefPermission "PublicationDAO", "**";
-  permission javax.security.jacc.EJBRoleRefPermission "DAO", "**";
   permission javax.security.jacc.EJBRoleRefPermission "PublicationEJB", "**";
+  permission javax.security.jacc.EJBRoleRefPermission "DAO", "**";
 };
 

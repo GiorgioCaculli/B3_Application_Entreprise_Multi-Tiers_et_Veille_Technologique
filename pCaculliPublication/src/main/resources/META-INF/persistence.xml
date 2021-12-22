@@ -11,7 +11,7 @@
 
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
         
-        <jta-data-source>jdbc/publication2021</jta-data-source>
+        <jta-data-source>jdbc/publications2021</jta-data-source>
 
         <properties>
             <!--<property name="javax.persistence.jdbc.driver"

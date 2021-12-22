@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html xmlns:jsf="http://xmlns.jcp.org/jsf" xmlns:h="http://xmlns.jcp.org/jsf/html">
+<html xmlns:jsf="http://xmlns.jcp.org/jsf/core"
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:f="http://xmlns.jcp.org/jsf/core">
 <head>
 
 <title>Start Page</title>
@@ -7,8 +9,11 @@
 </head>
 <body>
 	<h1>Hello World!</h1>
-	<h:form>
-	   
+	<h:form action="#{publicationControl.createNewPublication()}" method="POST">
+	   Titre: <input type="text" name="titre" /><br />
+	   Annee: <input type="number" name="annee" step="1" /><br />
+	   Prix: <input type="number" name="prix" step="0.01" /><br />
+	   <input type="submit"/>
 	</h:form>
 </body>
 </html>
