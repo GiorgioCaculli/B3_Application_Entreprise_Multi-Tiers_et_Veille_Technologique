@@ -7,8 +7,19 @@
 </head>
 <body>
 	<h1>Publication List</h1>
-	<ul>
-	   #{publicationControl.showList()}
-	</ul>
+	<h:dataTable value="#{publicationControl.showList()}" var="publication">
+	   <h:column>
+	       #{publication.id}
+	   </h:column>
+       <h:column>
+           #{publication.titre}
+       </h:column>
+       <h:column>
+           #{publication.annee}
+       </h:column>
+       <h:column>
+           #{publication.prix}
+       </h:column>
+	</h:dataTable>
 </body>
 </html>

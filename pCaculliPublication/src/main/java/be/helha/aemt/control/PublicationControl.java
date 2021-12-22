@@ -1,6 +1,7 @@
 package be.helha.aemt.control;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.ejb.EJB;
 import javax.enterprise.context.SessionScoped;
@@ -26,15 +27,8 @@ public class PublicationControl implements Serializable
         return "ajoutPublication";
     }
     
-    public String showList()
+    public List< Publication > showList()
     {
-        StringBuilder sb = new StringBuilder();
-        
-        for( Publication publication : publicationEJB.getAllPublications() )
-        {
-            sb.append( "<li>" ).append( publication ).append( "</li>" );
-        }
-        
-        return sb.toString();
+        return publicationEJB.getAllPublications();
     }
 }

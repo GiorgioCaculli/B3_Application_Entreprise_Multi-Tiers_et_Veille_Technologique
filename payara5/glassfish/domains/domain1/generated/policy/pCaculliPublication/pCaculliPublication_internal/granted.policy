@@ -1,4 +1,4 @@
-/* AUTOMATICALLY GENERATED ON Mon Dec 13 12:52:21 CET 2021*/
+/* AUTOMATICALLY GENERATED ON Thu Dec 16 09:33:53 CET 2021*/
 /* DO NOT EDIT */
 
 grant {
@@ -21,7 +21,7 @@ grant {
 
 grant      principal * * {
   permission javax.security.jacc.EJBRoleRefPermission "PublicationDAO", "**";
-  permission javax.security.jacc.EJBRoleRefPermission "PublicationEJB", "**";
   permission javax.security.jacc.EJBRoleRefPermission "DAO", "**";
+  permission javax.security.jacc.EJBRoleRefPermission "PublicationEJB", "**";
 };
 

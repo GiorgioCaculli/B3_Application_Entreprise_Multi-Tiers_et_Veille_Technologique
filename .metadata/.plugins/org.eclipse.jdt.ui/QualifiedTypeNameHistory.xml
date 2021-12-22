@@ -12,7 +12,6 @@
     <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="javax.persistence.Id"/>
     <fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
-    <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
     <fullyQualifiedTypeName name="javax.persistence.UniqueConstraint"/>
     <fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
     <fullyQualifiedTypeName name="javax.persistence.OneToMany"/>
@@ -40,8 +39,6 @@
     <fullyQualifiedTypeName name="javax.ejb.Remote"/>
     <fullyQualifiedTypeName name="be.helha.aemt.ejb.IBonjourRemoteEJB"/>
     <fullyQualifiedTypeName name="be.helha.aemt.ejb.BonjourLocalEJB"/>
-    <fullyQualifiedTypeName name="javax.ejb.EJB"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="be.helha.aemt.entities.Utilisateur"/>
     <fullyQualifiedTypeName name="be.helha.aemt.entities.Adresse"/>
     <fullyQualifiedTypeName name="javax.persistence.PersistenceContext"/>
@@ -52,8 +49,13 @@
     <fullyQualifiedTypeName name="javax.inject.Named"/>
     <fullyQualifiedTypeName name="javax.enterprise.context.SessionScoped"/>
     <fullyQualifiedTypeName name="javax.persistence.Entity"/>
+    <fullyQualifiedTypeName name="be.helha.aemt.dao.DAO"/>
     <fullyQualifiedTypeName name="javax.ejb.Stateless"/>
     <fullyQualifiedTypeName name="javax.ejb.LocalBean"/>
-    <fullyQualifiedTypeName name="be.helha.aemt.dao.DAO"/>
+    <fullyQualifiedTypeName name="be.helha.aemt.dao.PublicationDAO"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+    <fullyQualifiedTypeName name="javax.ejb.EJB"/>
+    <fullyQualifiedTypeName name="be.helha.aemt.ejb.PublicationEJB"/>
     <fullyQualifiedTypeName name="be.helha.aemt.entities.Publication"/>
 </qualifiedTypeNameHistroy>
