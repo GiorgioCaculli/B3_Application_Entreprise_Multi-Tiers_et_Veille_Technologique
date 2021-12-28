@@ -1,22 +1,38 @@
 @charset "UTF-8";
 
-.publicationTable
+body
 {
-	width: 100%;
+    background-color: antiquewhite;
 }
 
-.publicationTableRowOdd,
-.publicationTableRowEven
+table
 {
-	text-align: center;
+    width: 100%;
+    text-align: center;
 }
 
-.publicationTableRowOdd
+.TableHeader
 {
-	background-color: red;
+    background: aliceblue;
 }
 
-.publicationTableRowEven
-{
-	background-color: blue;
+.TableRowOdd,
+.TableRowEven {
+    text-align: center;
+}
+
+.TableRowOdd {
+    background-color: red;
+}
+
+.TableRowEven {
+    background-color: blue;
+}
+
+.TablePublication {
+    width: 100%;
+}
+
+.TableUtilisateur {
+    width: 100%;
 }

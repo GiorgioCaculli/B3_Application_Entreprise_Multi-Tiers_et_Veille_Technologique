@@ -1,20 +1,19 @@
 package be.helha.aemt.dao;
 
-import java.util.List;
-
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import java.util.List;
 
 
 @Stateless
 @LocalBean
 public class DAO< T > implements IDAO< T >
 {
-    @PersistenceContext(unitName = "pUPublication")
+    @PersistenceContext( unitName = "pUPublication" )
     protected EntityManager em;
-    
+
     public DAO()
     {
     }

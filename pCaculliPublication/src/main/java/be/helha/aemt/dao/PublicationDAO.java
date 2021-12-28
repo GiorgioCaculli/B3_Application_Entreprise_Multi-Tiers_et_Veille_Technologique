@@ -1,16 +1,13 @@
 package be.helha.aemt.dao;
 
-import java.util.List;
+import be.helha.aemt.entities.Publication;
 
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
-import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
-import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import javax.persistence.TypedQuery;
-
-import be.helha.aemt.entities.Publication;
+import java.util.List;
 
 @Stateless
 @LocalBean
@@ -18,7 +15,7 @@ public class PublicationDAO extends DAO< Publication >
 {
     public Publication findPublicationByTitle( Publication p )
     {
-        if( p == null || p.getTitre() == null )
+        if ( p == null || p.getTitre() == null )
         {
             return null;
         }
@@ -28,9 +25,8 @@ public class PublicationDAO extends DAO< Publication >
         Publication resultPublication = null;
         try
         {
-            resultPublication = ( Publication ) query.getSingleResult();   
-        }
-        catch ( NoResultException nre )
+            resultPublication = ( Publication ) query.getSingleResult();
+        } catch ( NoResultException nre )
         {
             nre.printStackTrace();
         }
@@ -40,31 +36,31 @@ public class PublicationDAO extends DAO< Publication >
     @Override
     public Publication create( Publication publication )
     {
-        if( findPublicationByTitle( publication ) != null )
+        if ( findPublicationByTitle( publication ) != null )
         {
             return null;
         }
-        if( publication == null )
+        if ( publication == null )
         {
             return null;
         }
-        if( publication.getTitre() == null )
+        if ( publication.getTitre() == null )
         {
             return null;
         }
         em.persist( publication );
-        return super.create( publication );
+        return publication;
     }
 
     @Override
     public Publication read( Integer id )
     {
-        if( id == null )
+        if ( id == null )
         {
             return null;
         }
         Publication publication = em.find( Publication.class, id );
-        if( publication != null )
+        if ( publication != null )
         {
         }
         return publication;
@@ -88,10 +84,8 @@ public class PublicationDAO extends DAO< Publication >
     public List< Publication > findAll()
     {
         String loginQuery = "SELECT p FROM Publication p";
-        TypedQuery< Publication > query = em.createQuery(loginQuery, Publication.class );
-        List< Publication > resultPublication = query.getResultList();
-       
-        return resultPublication;
+        TypedQuery< Publication > query = em.createQuery( loginQuery, Publication.class );
+        return query.getResultList();
     }
-    
+
 }

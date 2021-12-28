@@ -1,17 +1,41 @@
 <!DOCTYPE html>
-<html xmlns:jsf="http://xmlns.jcp.org/jsf/core"
-    xmlns:h="http://xmlns.jcp.org/jsf/html"
-    xmlns:f="http://xmlns.jcp.org/jsf/core">
-<head>
+<html xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+    <title>Start Page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <h:outputStylesheet name="css/main.css"/>
+</h:head>
+<h:body>
+    <h1>Hello World!</h1>
+    <h:form>
+        <h:commandButton value="List"
+                         action="#{publicationControl.showListPage()}"/>
+        <h:commandButton value="Add"
+                         action="#{publicationControl.showAddPage()}"/>
+    </h:form>
 
-<title>Start Page</title>
-<meta http-equiv="  Content-Type" content="text/html; charset=UTF-8"/>
-</head>
-<body>
-	<h1>Hello World!</h1>
-	<h:form>
-       <h:commandButton value="List" action="#{publicationControl.showListPage()}"></h:commandButton>
-       <h:commandButton value="Add" action="#{publicationControl.showAddPage()}"></h:commandButton>
-	</h:form>
-</body>
+    <h:dataTable value="#{utilisateurControl.showUtilisateurList()}"
+                 var="utilisateur"
+                 styleClass="TableUtilisateur"
+                 headerClass="TableHeader"
+                 rowClass="TableRowOdd,TableRowEven">
+        <h:column>
+            <f:facet name="header">ID</f:facet>
+            #{utilisateur.id}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Login</f:facet>
+            #{utilisateur.login}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Password</f:facet>
+            #{utilisateur.password}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Role</f:facet>
+            #{utilisateur.role}
+        </h:column>
+    </h:dataTable>
+</h:body>
 </html>

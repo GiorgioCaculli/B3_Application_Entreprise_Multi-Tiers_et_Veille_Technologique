@@ -1,0 +1,273 @@
+[#|2021-12-26T16:40:48.479+0100|INFO|5.1.3|imq.log.Logger|_ThreadID=125;_ThreadName=JMS_PROXY_default_JMS_host-kernel(1) SelectorRunner;|[S2004]: Log output channel com.sun.messaging.jmq.util.log.SysLogHandler is disabled: no imqutil in java.library.path: [/mnt/sd1/NextCloud/Projects/UNI/BAC_3/B3_Application_Entreprise_Multi-Tiers_et_Veille_Technologique/payara5/glassfish/lib, /usr/java/packages/lib, /usr/lib64, /lib64, /lib, /usr/lib]|#]
+
+
+[#|2021-12-26T16:40:48.499+0100|FORCE|5.1.3|imq.log.Logger|_ThreadID=125;_ThreadName=JMS_PROXY_default_JMS_host-kernel(1) SelectorRunner;|
+================================================================================
+Message Queue 5.1.3
+Oracle
+Version:  5.1.3  (Build 1-a)
+Compile:  November 4 2021 1205
+
+Copyright (c) 2013, 2018 Oracle and/or its affiliates.  All rights reserved.
+================================================================================
+Java Runtime: 11.0.13 Gentoo /usr/lib64/openjdk-11
+|#]
+
+
+[#|2021-12-26T16:40:48.511+0100|FORCE|5.1.3|imq.log.Logger|_ThreadID=125;_ThreadName=JMS_PROXY_default_JMS_host-kernel(1) SelectorRunner;|   IMQ_HOME=/mnt/sd1/NextCloud/Projects/UNI/BAC_3/B3_Application_Entreprise_Multi-Tiers_et_Veille_Technologique/payara5/mq
+|#]
+
+
+[#|2021-12-26T16:40:48.511+0100|FORCE|5.1.3|imq.log.Logger|_ThreadID=125;_ThreadName=JMS_PROXY_default_JMS_host-kernel(1) SelectorRunner;|IMQ_VARHOME=/mnt/sd1/NextCloud/Projects/UNI/BAC_3/B3_Application_Entreprise_Multi-Tiers_et_Veille_Technologique/payara5/glassfish/domains/domain1/imq
+|#]
+
+
+[#|2021-12-26T16:40:48.512+0100|FORCE|5.1.3|imq.log.Logger|_ThreadID=125;_ThreadName=JMS_PROXY_default_JMS_host-kernel(1) SelectorRunner;|Linux 5.10.76-gentoo-r1-x86_64 amd64 localhost (4 cpu) gzc
+|#]
+
+
+[#|2021-12-26T16:40:48.512+0100|FORCE|5.1.3|imq.log.Logger|_ThreadID=125;_ThreadName=JMS_PROXY_default_JMS_host-kernel(1) SelectorRunner;|Java Heap Size: max=524288k, current=256000k
+|#]
+
+
+[#|2021-12-26T16:40:48.512+0100|FORCE|5.1.3|imq.log.Logger|_ThreadID=125;_ThreadName=JMS_PROXY_default_JMS_host-kernel(1) SelectorRunner;|Arguments: -jrehome "/usr/lib64/openjdk-11" -port 7676 -name imqbroker -nobind -imqhome /mnt/sd1/NextCloud/Projects/UNI/BAC_3/B3_Application_Entreprise_Multi-Tiers_et_Veille_Technologique/payara5/mq -varhome /mnt/sd1/NextCloud/Projects/UNI/BAC_3/B3_Application_Entreprise_Multi-Tiers_et_Veille_Technologique/payara5/glassfish/domains/domain1/imq -libhome /mnt/sd1/NextCloud/Projects/UNI/BAC_3/B3_Application_Entreprise_Multi-Tiers_et_Veille_Technologique/payara5/mq/lib -useRmiRegistry -rmiRegistryPort 8686 -save -silent
+|#]
+
+
+[#|2021-12-26T16:40:48.513+0100|FORCE|5.1.3|imq.log.Logger|_ThreadID=125;_ThreadName=JMS_PROXY_default_JMS_host-kernel(1) SelectorRunner;|JMSRA BrokerProps: imq.service.activate=jmsdirect, imq.cluster.dynamicChangeMasterBrokerEnabled=true, imq.imqcmd.password=*****, imq.cluster.nowaitForMasterBroker=true, imq.jmsra.managed=true
+|#]
+
+
+[#|2021-12-26T16:40:48.513+0100|FORCE|5.1.3|imq.log.Logger|_ThreadID=125;_ThreadName=JMS_PROXY_default_JMS_host-kernel(1) SelectorRunner;|Broker Properties: imq.service.activate=jmsdirect, imq.cluster.nowaitForMasterBroker=true, imq.jmx.rmiregistry.use=true, imq.portmapper.port=7676, imq.jmsra.managed=true, imq.instancename=imqbroker, java.util.logging.ConsoleHandler.level=OFF, imq.imqcmd.password=*****, imq.jmx.rmiregistry.port=8686, imq.service.runtimeAdd=mqdirect2, imq.cluster.dynamicChangeMasterBrokerEnabled=true, imq.portmapper.bind=false, imq.jmx.rmiregistry.start=false
+|#]
+
+
+[#|2021-12-26T16:40:48.513+0100|FORCE|5.1.3|imq.log.Logger|_ThreadID=125;_ThreadName=JMS_PROXY_default_JMS_host-kernel(1) SelectorRunner;|Embedded Broker 
+|#]
+
+
+[#|2021-12-26T16:40:48.534+0100|INFO|5.1.3|imq.log.Logger|_ThreadID=125;_ThreadName=JMS_PROXY_default_JMS_host-kernel(1) SelectorRunner;|[B1522]: Create thread pool portmapper for (4, 4)(60s) service
+|#]
+
+
+[#|2021-12-26T16:40:48.618+0100|INFO|5.1.3|imq.log.Logger|_ThreadID=125;_ThreadName=JMS_PROXY_default_JMS_host-kernel(1) SelectorRunner;|imq.persist.minimizeWrites=true
+|#]
+
+
+[#|2021-12-26T16:40:48.619+0100|INFO|5.1.3|imq.log.Logger|_ThreadID=125;_ThreadName=JMS_PROXY_default_JMS_host-kernel(1) SelectorRunner;|imq.persist.file.minimizeWrites=false
+|#]
+
+
+[#|2021-12-26T16:40:48.629+0100|FORCE|5.1.3|imq.log.Logger|_ThreadID=125;_ThreadName=JMS_PROXY_default_JMS_host-kernel(1) SelectorRunner;|[B1060]: Loading persistent data...
+|#]
+
+
+[#|2021-12-26T16:40:48.629+0100|FORCE|5.1.3|imq.log.Logger|_ThreadID=125;_ThreadName=JMS_PROXY_default_JMS_host-kernel(1) SelectorRunner;|Using built-in file-based persistent store: /mnt/sd1/NextCloud/Projects/UNI/BAC_3/B3_Application_Entreprise_Multi-Tiers_et_Veille_Technologique/payara5/glassfish/domains/domain1/imq/instances/imqbroker/
+|#]
+
+
+[#|2021-12-26T16:40:48.786+0100|WARNING|5.1.3|imq.log.Logger|_ThreadID=125;_ThreadName=JMS_PROXY_default_JMS_host-kernel(1) SelectorRunner;|WARNING Existing file: incompleteTxnStorehas older cookie version than current version. Current version = 1. Original file version = 0
+|#]
+
+
+[#|2021-12-26T16:40:48.841+0100|INFO|5.1.3|imq.log.Logger|_ThreadID=125;_ThreadName=JMS_PROXY_default_JMS_host-kernel(1) SelectorRunner;|[B2219]: Broker property setting imq.persist.minimizeWritesLevel2=true will be ignored
+|#]
+
+
+[#|2021-12-26T16:40:48.853+0100|WARNING|5.1.3|imq.log.Logger|_ThreadID=125;_ThreadName=JMS_PROXY_default_JMS_host-kernel(1) SelectorRunner;|WARNING [B3168]: Invalid broker address for this broker to run in cluster: Loopback IP address is not allowed in broker address mq://127.0.0.1:7676/?instName=imqbroker&brokerSessionUID=2076016454776003584&ha=false for cluster
+|#]
+
+
+[#|2021-12-26T16:40:48.853+0100|WARNING|5.1.3|imq.log.Logger|_ThreadID=125;_ThreadName=JMS_PROXY_default_JMS_host-kernel(1) SelectorRunner;|WARNING [B1137]: Cluster initialization failed. Disabling the cluster service.
+|#]
+
+
+[#|2021-12-26T16:40:48.856+0100|INFO|5.1.3|imq.log.Logger|_ThreadID=125;_ThreadName=JMS_PROXY_default_JMS_host-kernel(1) SelectorRunner;|[B1013]: Auto Creation of Queues is enabled
+|#]
+
+
+[#|2021-12-26T16:40:48.899+0100|INFO|5.1.3|imq.log.Logger|_ThreadID=125;_ThreadName=JMS_PROXY_default_JMS_host-kernel(1) SelectorRunner;|new transaction log enabled
+|#]
+
+
+[#|2021-12-26T16:40:48.899+0100|INFO|5.1.3|imq.log.Logger|_ThreadID=125;_ThreadName=JMS_PROXY_default_JMS_host-kernel(1) SelectorRunner;|sync writes to disk = false
+|#]
+
+
+[#|2021-12-26T16:40:48.899+0100|INFO|5.1.3|imq.log.Logger|_ThreadID=125;_ThreadName=JMS_PROXY_default_JMS_host-kernel(1) SelectorRunner;|logNonTransactedMsgSend = false
+|#]
+
+
+[#|2021-12-26T16:40:48.900+0100|INFO|5.1.3|imq.log.Logger|_ThreadID=125;_ThreadName=JMS_PROXY_default_JMS_host-kernel(1) SelectorRunner;|logNonTransactedMsgAck = false
+|#]
+
+
+[#|2021-12-26T16:40:48.900+0100|INFO|5.1.3|imq.log.Logger|_ThreadID=125;_ThreadName=JMS_PROXY_default_JMS_host-kernel(1) SelectorRunner;|[B1392]: Opening transaction log with file mode rw, maximum size 10,485,760 bytes
+|#]
+
+
+[#|2021-12-26T16:40:48.928+0100|INFO|5.1.3|imq.log.Logger|_ThreadID=125;_ThreadName=JMS_PROXY_default_JMS_host-kernel(1) SelectorRunner;|[B1136]: Processing stored transactions
+|#]
+
+
+[#|2021-12-26T16:40:48.928+0100|INFO|5.1.3|imq.log.Logger|_ThreadID=125;_ThreadName=JMS_PROXY_default_JMS_host-kernel(1) SelectorRunner;|[B1390]: Loading of transactions has been successfully completed
+|#]
+
+
+[#|2021-12-26T16:40:48.929+0100|INFO|5.1.3|imq.log.Logger|_ThreadID=125;_ThreadName=JMS_PROXY_default_JMS_host-kernel(1) SelectorRunner;|[B1434]: Retrieving stored destinations
+|#]
+
+
+[#|2021-12-26T16:40:48.929+0100|INFO|5.1.3|imq.log.Logger|_ThreadID=125;_ThreadName=JMS_PROXY_default_JMS_host-kernel(1) SelectorRunner;|[B1503]: Retrieved 0 destinations from store
+|#]
+
+
+[#|2021-12-26T16:40:48.929+0100|INFO|5.1.3|imq.log.Logger|_ThreadID=125;_ThreadName=JMS_PROXY_default_JMS_host-kernel(1) SelectorRunner;|[B1144]: Creating Dead Message Queue
+|#]
+
+
+[#|2021-12-26T16:40:48.947+0100|INFO|5.1.3|imq.log.Logger|_ThreadID=125;_ThreadName=JMS_PROXY_default_JMS_host-kernel(1) SelectorRunner;|[B1158]: Administrator has created destination mq.sys.dmq [Queue]
+|#]
+
+
+[#|2021-12-26T16:40:49.009+0100|INFO|5.1.3|imq.log.Logger|_ThreadID=125;_ThreadName=JMS_PROXY_default_JMS_host-kernel(1) SelectorRunner;|[B1239]: Using platform MBean server
+|#]
+
+
+[#|2021-12-26T16:40:49.060+0100|INFO|5.1.3|imq.log.Logger|_ThreadID=125;_ThreadName=JMS_PROXY_default_JMS_host-kernel(1) SelectorRunner;|[B1234]: JMX Connector Server jmxrmi started successfully with url service:jmx:rmi://medion/jndi/rmi://localhost:8686/localhost/7676/jmxrmi
+|#]
+
+
+[#|2021-12-26T16:40:49.188+0100|INFO|5.1.3|imq.log.Logger|_ThreadID=125;_ThreadName=JMS_PROXY_default_JMS_host-kernel(1) SelectorRunner;|[B1004]: Starting the admin service using tcp(host = *, port=0, mode=dedicated) with min threads 4 and max threads of 10 
+|#]
+
+
+[#|2021-12-26T16:40:49.190+0100|INFO|5.1.3|imq.log.Logger|_ThreadID=125;_ThreadName=JMS_PROXY_default_JMS_host-kernel(1) SelectorRunner;|[B1227]: Using file user repository for admin service connection authentication
+|#]
+
+
+[#|2021-12-26T16:40:49.210+0100|INFO|5.1.3|imq.log.Logger|_ThreadID=125;_ThreadName=JMS_PROXY_default_JMS_host-kernel(1) SelectorRunner;|[B1004]: Starting the jms service using tcp(host = *, port=0, mode=dedicated) with min threads 10 and max threads of 1000 
+|#]
+
+
+[#|2021-12-26T16:40:49.210+0100|INFO|5.1.3|imq.log.Logger|_ThreadID=125;_ThreadName=JMS_PROXY_default_JMS_host-kernel(1) SelectorRunner;|[B1227]: Using file user repository for jms service connection authentication
+|#]
+
+
+[#|2021-12-26T16:40:49.222+0100|INFO|5.1.3|imq.log.Logger|_ThreadID=125;_ThreadName=JMS_PROXY_default_JMS_host-kernel(1) SelectorRunner;|[B1004]: Starting the mqdirect2 service using in-process connections with min threads 0 and max threads of 0 
+|#]
+
+
+[#|2021-12-26T16:40:49.223+0100|INFO|5.1.3|imq.log.Logger|_ThreadID=125;_ThreadName=JMS_PROXY_default_JMS_host-kernel(1) SelectorRunner;|[B1227]: Using file user repository for mqdirect2 service connection authentication
+|#]
+
+
+[#|2021-12-26T16:40:49.227+0100|INFO|5.1.3|imq.log.Logger|_ThreadID=125;_ThreadName=JMS_PROXY_default_JMS_host-kernel(1) SelectorRunner;|[B1004]: Starting the jmsdirect service using  with min threads 0 and max threads of 0 
+|#]
+
+
+[#|2021-12-26T16:40:49.228+0100|INFO|5.1.3|imq.log.Logger|_ThreadID=125;_ThreadName=JMS_PROXY_default_JMS_host-kernel(1) SelectorRunner;|[B1227]: Using file user repository for jmsdirect service connection authentication
+|#]
+
+
+[#|2021-12-26T16:40:49.235+0100|FORCE|5.1.3|imq.log.Logger|_ThreadID=125;_ThreadName=JMS_PROXY_default_JMS_host-kernel(1) SelectorRunner;|[B1039]: Broker "imqbroker@localhost:7676" ready.
+|#]
+
+
+[#|2021-12-26T16:40:49.344+0100|WARNING|5.1.3|imq.log.Logger|_ThreadID=125;_ThreadName=JMS_PROXY_default_JMS_host-kernel(1) SelectorRunner;|WARNING [B3164]: The portmapper service got an exception processing a request from client 192.168.88.254. The client may need to attempt the connection again:
+java.io.IOException: Connection reset by peer
+	at java.base/sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:276)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:245)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:223)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:353)
+	at java.base/sun.nio.ch.SocketAdaptor$SocketInputStream.read(SocketAdaptor.java:210)
+	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:101)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+	at java.base/java.io.BufferedReader.read(BufferedReader.java:182)
+	at com.sun.messaging.jmq.jmsserver.service.PortMapper.readLineWithLimit(PortMapper.java:839)
+	at com.sun.messaging.jmq.jmsserver.service.PortMapper.handleSocket(PortMapper.java:773)
+	at com.sun.messaging.jmq.jmsserver.service.PortMapper.handleRequest(PortMapper.java:870)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at com.sun.enterprise.connectors.jms.system.ActiveJmsResourceAdapter.handleRequest(ActiveJmsResourceAdapter.java:2707)
+	at com.sun.enterprise.v3.services.impl.ServiceInitializerFilter.handleAccept(ServiceInitializerFilter.java:155)
+	at org.glassfish.grizzly.filterchain.ExecutorResolver$7.execute(ExecutorResolver.java:79)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeFilter(DefaultFilterChain.java:260)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeChainPart(DefaultFilterChain.java:177)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.execute(DefaultFilterChain.java:109)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.process(DefaultFilterChain.java:88)
+	at org.glassfish.grizzly.ProcessorExecutor.execute(ProcessorExecutor.java:53)
+	at org.glassfish.grizzly.nio.transport.TCPNIOTransport.fireIOEvent(TCPNIOTransport.java:524)
+	at org.glassfish.grizzly.nio.transport.TCPNIOServerConnection$RegisterAcceptedChannelCompletionHandler.completed(TCPNIOServerConnection.java:329)
+	at org.glassfish.grizzly.nio.transport.TCPNIOServerConnection$RegisterAcceptedChannelCompletionHandler.completed(TCPNIOServerConnection.java:296)
+	at org.glassfish.grizzly.nio.DefaultSelectorHandler.registerChannel0(DefaultSelectorHandler.java:311)
+	at org.glassfish.grizzly.nio.DefaultSelectorHandler.registerChannelAsync(DefaultSelectorHandler.java:167)
+	at org.glassfish.grizzly.nio.RoundRobinConnectionDistributor.registerChannelAsync(RoundRobinConnectionDistributor.java:77)
+	at org.glassfish.grizzly.nio.transport.TCPNIOServerConnection.registerAcceptedChannel(TCPNIOServerConnection.java:189)
+	at org.glassfish.grizzly.nio.transport.TCPNIOServerConnection.onAccept(TCPNIOServerConnection.java:226)
+	at org.glassfish.grizzly.nio.transport.TCPNIOTransport.fireIOEvent(TCPNIOTransport.java:494)
+	at org.glassfish.grizzly.strategies.AbstractIOStrategy.fireIOEvent(AbstractIOStrategy.java:89)
+	at org.glassfish.grizzly.strategies.SameThreadIOStrategy.executeIoEvent(SameThreadIOStrategy.java:79)
+	at org.glassfish.grizzly.strategies.AbstractIOStrategy.executeIoEvent(AbstractIOStrategy.java:66)
+	at org.glassfish.grizzly.nio.SelectorRunner.iterateKeyEvents(SelectorRunner.java:391)
+	at org.glassfish.grizzly.nio.SelectorRunner.iterateKeys(SelectorRunner.java:360)
+	at org.glassfish.grizzly.nio.SelectorRunner.doSelect(SelectorRunner.java:324)
+	at org.glassfish.grizzly.nio.SelectorRunner.run(SelectorRunner.java:255)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:569)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:549)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+|#]
+
+
+[#|2021-12-26T17:37:06.999+0100|FORCE|5.1.3|imq.log.Logger|_ThreadID=522;_ThreadName=RA Shutdown;|[B1047]: Shutting down broker...[BrokerProcess:Thread[RA Shutdown,5,main]]
+|#]
+
+
+[#|2021-12-26T17:37:07.020+0100|FORCE|5.1.3|imq.log.Logger|_ThreadID=522;_ThreadName=RA Shutdown;|[B1077]: Broadcast good-bye to all connections ...
+|#]
+
+
+[#|2021-12-26T17:37:07.021+0100|FORCE|5.1.3|imq.log.Logger|_ThreadID=522;_ThreadName=RA Shutdown;|[B1078]: Flushing good-bye messages ...
+|#]
+
+
+[#|2021-12-26T17:37:07.021+0100|INFO|5.1.3|imq.log.Logger|_ThreadID=522;_ThreadName=RA Shutdown;|[B1007]: Stopping Service admin with protocol tcp(host = *, port=0, mode=dedicated)
+|#]
+
+
+[#|2021-12-26T17:37:07.021+0100|INFO|5.1.3|imq.log.Logger|_ThreadID=522;_ThreadName=RA Shutdown;|[B1007]: Stopping Service jmsdirect with protocol 
+|#]
+
+
+[#|2021-12-26T17:37:07.021+0100|INFO|5.1.3|imq.log.Logger|_ThreadID=522;_ThreadName=RA Shutdown;|[B1007]: Stopping Service mqdirect2 with protocol none
+|#]
+
+
+[#|2021-12-26T17:37:07.022+0100|INFO|5.1.3|imq.log.Logger|_ThreadID=522;_ThreadName=RA Shutdown;|[B1007]: Stopping Service jms with protocol tcp(host = *, port=0, mode=dedicated)
+|#]
+
+
+[#|2021-12-26T17:37:07.034+0100|WARNING|5.1.3|imq.log.Logger|_ThreadID=522;_ThreadName=RA Shutdown;|WARNING Caught exception when stopping JMX Connector Server jmxrmi:
+java.io.IOException: Cannot bind to URL: javax.naming.ServiceUnavailableException [Root exception is java.rmi.ConnectException: Connection refused to host: localhost; nested exception is: 
+	java.net.ConnectException: Connection refused (Connection refused)]
+|#]
+
+
+[#|2021-12-26T17:37:07.035+0100|WARNING|5.1.3|imq.log.Logger|_ThreadID=522;_ThreadName=RA Shutdown;|WARNING [B2138]: Caught exception when stopping JMX Agent:
+java.io.IOException: Cannot bind to URL: javax.naming.ServiceUnavailableException [Root exception is java.rmi.ConnectException: Connection refused to host: localhost; nested exception is: 
+	java.net.ConnectException: Connection refused (Connection refused)]
+|#]
+
+
+[#|2021-12-26T17:37:09.201+0100|FORCE|5.1.3|imq.log.Logger|_ThreadID=522;_ThreadName=RA Shutdown;|[B1048]: Shutdown of broker complete.
+|#]
+
+

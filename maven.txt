@@ -1,0 +1,15 @@
+-> preference
+compilateur niveau 11
+file new maven project
+créer un projet simple, donc passe la selection d'un model de projet, tapez sur Next.
+
+Groupe ID: be.helha.aent, arch ID (nom du preojet) , packaging : jar.
+
+à mettre dans le fichier pom.xml{
+
+<properties>
+	<maven.compiler.source>11</maven.compiler.source>
+	<maven.compiler.target>11</maven.compiler.target>
+</properties>
+
+}(sans les  accolades)

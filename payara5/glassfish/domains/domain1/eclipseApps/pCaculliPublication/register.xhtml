@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://java.sun.com/jsf/html">
+<h:head>
+    <title>Register</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <h:outputStylesheet name="css/main.css"/>
+</h:head>
+<h:body>
+    <h:form>
+        Username: <h:inputText value="#{utilisateurControl.utilisateur.login}"/>
+        Password: <h:inputSecret value="#{utilisateurControl.utilisateur.password}"/>
+        Role: <h:inputText value="#{utilisateurControl.utilisateur.role}"/>
+        <br />
+        <h:commandButton value="Register" action="#{utilisateurControl.createNewUtilisateur()}"/>
+    </h:form>
+</h:body>
+</html>

@@ -1,9 +1,13 @@
-/* AUTOMATICALLY GENERATED ON Wed Dec 22 12:58:09 CET 2021*/
+/* AUTOMATICALLY GENERATED ON Tue Dec 28 20:46:37 CET 2021*/
 /* DO NOT EDIT */
 
 grant {
-  permission javax.security.jacc.WebResourcePermission "/";
-  permission javax.security.jacc.WebUserDataPermission "/";
+  permission javax.security.jacc.WebUserDataPermission "/admin/*";
+  permission javax.security.jacc.WebUserDataPermission "/:/users/*:/admin/*";
+  permission javax.security.jacc.WebUserDataPermission "/users/*";
+  permission javax.security.jacc.WebResourcePermission "/users/*";
+  permission javax.security.jacc.WebResourcePermission "/admin/*", "!DELETE,GET,HEAD,OPTIONS,POST,PUT,TRACE";
+  permission javax.security.jacc.WebResourcePermission "/:/users/*:/admin/*";
 };
 
 grant      principal * * {
@@ -11,5 +15,13 @@ grant      principal * * {
   permission javax.security.jacc.WebRoleRefPermission "", "**";
   permission javax.security.jacc.WebRoleRefPermission "Faces Servlet", "**";
   permission javax.security.jacc.WebRoleRefPermission "default", "**";
+};
+
+grant      principal org.glassfish.security.common.Group "admin" {
+  permission javax.security.jacc.WebResourcePermission "/admin/*", "DELETE,GET,HEAD,OPTIONS,POST,PUT,TRACE";
+};
+
+grant      principal org.glassfish.security.common.Group "user" {
+  permission javax.security.jacc.WebResourcePermission "/admin/*", "DELETE,GET,HEAD,OPTIONS,POST,PUT,TRACE";
 };
 

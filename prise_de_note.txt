@@ -1,0 +1,46 @@
+une classe donne un objet POJO. pour les entités (utilise pour les base de données rellationelle), utilisation d'annotation @Entity, permet via ORM de créé une table. Les entité sont gérée par JPA.
+Détaché une entité permet de travailler avec sans influencé la base de donnéée. Le contexte de persistence ressemble à une mémoire cache, d'abord un regarde dedans avant d'aller dans la base de données 
+pour aller chercher l'information.
+
+création d'un projet
+--------------------
+create dossier "META-INF" -> finish.
+mettre "persistence.xml" dans le dossier "META-INF".
+créé la base de donnée ainsi que l'utilisateur et c'est droit
+créé une classe utilisateur
+modifie le fichier POM.xml pour mettre dans dependence, aller sur mavenrepo, copier coller les balises xml du site et les coller sur pom.xml, ! ajouter les balise <dependencies> </dependencies>
+
+
+mise en place d'un serveur payara
+---------------------------------
+
+	-Télécharger Payara-5.2021.8.ZIP
+	-Dézipper l'archive dans un dossier "serveur"
+	-Ouvrir le market place d'éclipse et télécharger "payara tools"
+	-Ouvrir les Window préférence->serveur->runtime->add, choisir le dossier payara5, puis chercher le dossier d'emplacement de JDK11 (ou openJDK11)
+	-Aller dans l'onglet serveur, si il n'est pas dans le groupe (console, javadoc,...), aller dans Window->show view-> other-> serveur->serveur
+	-Dans l'onglet serveur, click droit sur payaraserveur, start serveur
+
+
+Pour mettre l'app sur le serveur
+--------------------------------
+
+2 méthodes :
+	
+	1. serveur demarer, click droit sur la propriété du projet-> project facets, cocher "Dynamic Web Module", cliquer sur "finish", dans l'onglet serveur, click droit sur payara, cliquer sur "add or 
+		remove", ajouter le projet .
+
+
+Application web
+----------------
+
+	-ajouter un source folder
+	  src/main/webapp
+
+	-créer un folder "WEB-INF"
+
+	- ajouter web.xml dans "WEB-INF"
+
+
+
+

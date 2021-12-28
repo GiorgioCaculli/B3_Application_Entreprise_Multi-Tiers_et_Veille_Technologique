@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:h="http://xmlns.jcp.org/jsf/html" xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+    <title>Start Page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <h:outputStylesheet name="css/main.css"/>
+</h:head>
+
+<h:body>
+    <h1>Publication List</h1>
+
+    <h:dataTable value="#{publicationControl.showPublicationList()}"
+                 var="publication"
+                 styleClass="TablePublication"
+                 headerClass="TableHeader"
+                 rowClass="TableRowOdd,TableRowEven">
+        <h:column>
+            <f:facet name="header">ID</f:facet>
+            #{publication.id}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Titre</f:facet>
+            #{publication.titre}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Annee</f:facet>
+            #{publication.annee}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Prix</f:facet>
+            #{publication.prix}
+        </h:column>
+        <h:column>
+            <f:facet name="header">View</f:facet>
+            <a href="detailPublication.xhtml?facets-redirect=true&amp;id=#{publication.id}">View</a>
+        </h:column>
+</h:dataTable>
+
+</h:body>
+
+</html>
