@@ -1,7 +1,8 @@
 Manifest-Version: 1.0
+Built-By: ubuntu
 Glassfish-require-services: org.glassfish.api.admingui.ConsoleProvider
-Build-Jdk-Spec: 1.8
-Created-By: Maven WAR Plugin 3.3.2
+Created-By: Apache Maven 3.6.3
+Build-Jdk: 1.8.0_302
 HK2-Import-Bundles: fish.payara.server.internal.admingui.console-commo
  n,org.glassfish.hk2.hk2,fish.payara.server.internal.admingui.console-
  plugin-service, fish.payara.server.internal.deployment.deployment-cli

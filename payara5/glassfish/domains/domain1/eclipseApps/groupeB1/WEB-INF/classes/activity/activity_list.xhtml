@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+    <title>Start Page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <h:outputStylesheet name="css/main.css"/>
+    <h:outputStylesheet name="css/jquery-ui.css"/>
+    <h:outputScript name="js/jquery-3.6.0.min.js"/>
+</h:head>
+
+<h:body>
+    <h1>Activities List</h1>
+
+    <h:dataTable value="#{eventControl.showEventList()}"
+                 var="activity"
+                 styleClass="TablePublication"
+                 headerClass="TableHeader"
+                 rowClass="TableRowOdd,TableRowEven">
+        <h:column>
+            <f:facet name="header">ID</f:facet>
+            #{activity.id}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Name</f:facet>
+            #{activity.name}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Date &amp; Time</f:facet>
+            #{activity.beginDate} - #{activity.endDate} at #{activity.beginHour}: #{activity.endHour}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Place</f:facet>
+            #{activity.place}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Description</f:facet>
+            #{activity.description}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Type</f:facet>
+            #{activity.activityType}
+        </h:column>
+        <h:column>
+            <f:facet name="header">View</f:facet>
+            <a href="activity_details.xhtml?facets-redirect=true&amp;id=#{activity.id}">View</a>
+        </h:column>
+    </h:dataTable>
+
+</h:body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+    <title>Users List</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <h:outputStylesheet name="css/main.css"/>
+    <h:outputScript name="js/jquery-3.6.0.min.js"/>
+</h:head>
+<h:body>
+    <h1>Users List</h1>
+
+    <h:outputScript target="head">
+        $ = jQuery;
+        $(document).ready(function ()
+        {
+            console.log("Hello World!");
+        });
+    </h:outputScript>
+    <h:dataTable value="#{userControl.showUserList()}"
+                 var="user"
+                 styleClass="TableUtilisateur"
+                 headerClass="TableHeader"
+                 rowClass="TableRowOdd,TableRowEven">
+        <h:column>
+            <f:facet name="header">ID</f:facet>
+            #{user.id}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Login</f:facet>
+            #{user.login}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Password</f:facet>
+            #{user.password}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Role</f:facet>
+            #{user.role}
+        </h:column>
+    </h:dataTable>
+</h:body>
+</html>

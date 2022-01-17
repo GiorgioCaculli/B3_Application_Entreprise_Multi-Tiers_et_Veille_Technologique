@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:h="http://xmlns.jcp.org/jsf/html"
+>
+
+<h:head>
+    <title>Detail</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <h:outputStylesheet name="css/main.css"/>
+    <h:outputScript name="js/jquery-3.6.0.min.js"/>
+</h:head>
+
+<h:body>
+    <h1>Titre #{eventControl.eventById(request.getParameter('id')).titre}</h1>
+    <h1>Annee #{eventControl.eventById(param['id']).annee}</h1>
+    <h1>Prix #{eventControl.eventById(param['id']).prix}</h1>
+</h:body>
+
+</html>

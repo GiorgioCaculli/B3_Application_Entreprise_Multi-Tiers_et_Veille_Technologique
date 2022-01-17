@@ -1,0 +1,83 @@
+/* AUTOMATICALLY GENERATED ON Mon Jan 17 14:33:05 CET 2022*/
+/* DO NOT EDIT */
+
+grant {
+  permission javax.security.jacc.EJBMethodPermission "UserDAO", "delete,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "EventDAO", "delete,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "InstructorDAO", "read,Local,java.lang.Integer";
+  permission javax.security.jacc.EJBMethodPermission "DAO", "update,Local,java.lang.Object,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "AdminDAO", "delete,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "UserEJB", "getAllUser,Local,";
+  permission javax.security.jacc.EJBMethodPermission "EventDAO", "read,Local,java.lang.Integer";
+  permission javax.security.jacc.EJBMethodPermission "CourseDAO", "create,Local,be.helha.aemt.entities.Course";
+  permission javax.security.jacc.EJBMethodPermission "AdminDAO", "update,Local,be.helha.aemt.entities.Admin,be.helha.aemt.entities.Admin";
+  permission javax.security.jacc.EJBMethodPermission "CourseDAO", "create,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "ActivityDAO", "update,Local,be.helha.aemt.entities.Activity,be.helha.aemt.entities.Activity";
+  permission javax.security.jacc.EJBMethodPermission "UserDAO", "findUserByLogin,Local,java.lang.String";
+  permission javax.security.jacc.EJBMethodPermission "EventEJB", "createEvent,Local,java.lang.String,java.lang.String,java.lang.String";
+  permission javax.security.jacc.EJBMethodPermission "CourseDAO", "findAll,Local,";
+  permission javax.security.jacc.EJBMethodPermission "AdminDAO", "findAll,Local,";
+  permission javax.security.jacc.EJBMethodPermission "DAO", "findAll,Local,";
+  permission javax.security.jacc.EJBMethodPermission "CourseDAO", "delete,Local,be.helha.aemt.entities.Course";
+  permission javax.security.jacc.EJBMethodPermission "InstructorDAO", "create,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "UserDAO", "create,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "EventDAO", "create,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "UserDAO", "create,Local,be.helha.aemt.entities.User";
+  permission javax.security.jacc.EJBMethodPermission "AdminDAO", "create,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "EventDAO", "update,Local,be.helha.aemt.entities.Event,be.helha.aemt.entities.Event";
+  permission javax.security.jacc.EJBMethodPermission "DAO", "delete,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "CourseDAO", "read,Local,java.lang.Integer";
+  permission javax.security.jacc.EJBMethodPermission "InstructorDAO", "delete,Local,be.helha.aemt.entities.Instructor";
+  permission javax.security.jacc.EJBMethodPermission "CourseDAO", "delete,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "UserDAO", "read,Local,java.lang.Integer";
+  permission javax.security.jacc.EJBMethodPermission "ActivityDAO", "create,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "UserEJB", "createUser,Local,java.lang.String,java.lang.String";
+  permission javax.security.jacc.EJBMethodPermission "AdminDAO", "delete,Local,be.helha.aemt.entities.Admin";
+  permission javax.security.jacc.EJBMethodPermission "InstructorDAO", "create,Local,be.helha.aemt.entities.Instructor";
+  permission javax.security.jacc.EJBMethodPermission "ActivityEJB", "getAllActivities,Local,";
+  permission javax.security.jacc.EJBMethodPermission "EventDAO", "create,Local,be.helha.aemt.entities.Event";
+  permission javax.security.jacc.EJBMethodPermission "InstructorDAO", "findAll,Local,";
+  permission javax.security.jacc.EJBMethodPermission "ActivityDAO", "findActivityByName,Local,be.helha.aemt.entities.Activity";
+  permission javax.security.jacc.EJBMethodPermission "InstructorDAO", "update,Local,be.helha.aemt.entities.Instructor,be.helha.aemt.entities.Instructor";
+  permission javax.security.jacc.EJBMethodPermission "ActivityDAO", "read,Local,java.lang.Integer";
+  permission javax.security.jacc.EJBMethodPermission "ActivityDAO", "delete,Local,be.helha.aemt.entities.Activity";
+  permission javax.security.jacc.EJBMethodPermission "AdminDAO", "read,Local,java.lang.Integer";
+  permission javax.security.jacc.EJBMethodPermission "UserDAO", "findUserByLogin,Local,be.helha.aemt.entities.User";
+  permission javax.security.jacc.EJBMethodPermission "AdminDAO", "update,Local,java.lang.Object,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "ActivityDAO", "update,Local,java.lang.Object,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "InstructorDAO", "delete,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "ActivityEJB", "getActivityById,Local,int";
+  permission javax.security.jacc.EJBMethodPermission "UserDAO", "findAll,Local,";
+  permission javax.security.jacc.EJBMethodPermission "EventDAO", "delete,Local,be.helha.aemt.entities.Event";
+  permission javax.security.jacc.EJBMethodPermission "EventEJB", "getAllEvents,Local,";
+  permission javax.security.jacc.EJBMethodPermission "DAO", "read,Local,java.lang.Integer";
+  permission javax.security.jacc.EJBMethodPermission "UserDAO", "delete,Local,be.helha.aemt.entities.User";
+  permission javax.security.jacc.EJBMethodPermission "EventEJB", "getEventById,Local,int";
+  permission javax.security.jacc.EJBMethodPermission "AdminDAO", "create,Local,be.helha.aemt.entities.Admin";
+  permission javax.security.jacc.EJBMethodPermission "EventDAO", "update,Local,java.lang.Object,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "UserDAO", "update,Local,be.helha.aemt.entities.User,be.helha.aemt.entities.User";
+  permission javax.security.jacc.EJBMethodPermission "EventDAO", "findAll,Local,";
+  permission javax.security.jacc.EJBMethodPermission "CourseDAO", "update,Local,java.lang.Object,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "ActivityDAO", "findAll,Local,";
+  permission javax.security.jacc.EJBMethodPermission "CourseDAO", "update,Local,be.helha.aemt.entities.Course,be.helha.aemt.entities.Course";
+  permission javax.security.jacc.EJBMethodPermission "DAO", "create,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "ActivityDAO", "create,Local,be.helha.aemt.entities.Activity";
+  permission javax.security.jacc.EJBMethodPermission "UserDAO", "update,Local,java.lang.Object,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "UserEJB", "findUserByLogin,Local,java.lang.String";
+  permission javax.security.jacc.EJBMethodPermission "InstructorDAO", "update,Local,java.lang.Object,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "ActivityDAO", "delete,Local,java.lang.Object";
+};
+
+grant      principal * * {
+  permission javax.security.jacc.EJBRoleRefPermission "AdminDAO", "**";
+  permission javax.security.jacc.EJBRoleRefPermission "ActivityDAO", "**";
+  permission javax.security.jacc.EJBRoleRefPermission "UserEJB", "**";
+  permission javax.security.jacc.EJBRoleRefPermission "UserDAO", "**";
+  permission javax.security.jacc.EJBRoleRefPermission "CourseDAO", "**";
+  permission javax.security.jacc.EJBRoleRefPermission "EventEJB", "**";
+  permission javax.security.jacc.EJBRoleRefPermission "EventDAO", "**";
+  permission javax.security.jacc.EJBRoleRefPermission "InstructorDAO", "**";
+  permission javax.security.jacc.EJBRoleRefPermission "ActivityEJB", "**";
+  permission javax.security.jacc.EJBRoleRefPermission "DAO", "**";
+};
+

@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+*{
+	margin:0;
+	padding: 0;
+}
+
+body {
+    background-color: antiquewhite;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+}
+
+.TableHeader {
+    background: aliceblue;
+}
+
+.TableRowOdd,
+.TableRowEven {
+    text-align: center;
+}
+
+.TableRowOdd {
+    background-color: red;
+}
+
+.TableRowEven {
+    background-color: blue;
+}
+
+.TablePublication {
+    width: 100%;
+}
+
+.TableUtilisateur {
+    width: 100%;
+}

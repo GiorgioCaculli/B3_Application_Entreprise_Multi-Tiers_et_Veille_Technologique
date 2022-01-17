@@ -1,0 +1,29 @@
+/* AUTOMATICALLY GENERATED ON Mon Jan 17 14:33:05 CET 2022*/
+/* DO NOT EDIT */
+
+grant {
+  permission javax.security.jacc.WebResourcePermission "/admin/*", "!DELETE,GET,HEAD,OPTIONS,POST,PUT,TRACE";
+  permission javax.security.jacc.WebResourcePermission "/activity/*";
+  permission javax.security.jacc.WebResourcePermission "/user/*", "!DELETE,GET,HEAD,OPTIONS,POST,PUT,TRACE";
+  permission javax.security.jacc.WebResourcePermission "/:/admin/*:/user/*:/activity/*";
+  permission javax.security.jacc.WebUserDataPermission "/user/*";
+  permission javax.security.jacc.WebUserDataPermission "/admin/*";
+  permission javax.security.jacc.WebUserDataPermission "/:/admin/*:/user/*:/activity/*";
+  permission javax.security.jacc.WebUserDataPermission "/activity/*";
+};
+
+grant      principal * * {
+  permission javax.security.jacc.WebRoleRefPermission "jsp", "**";
+  permission javax.security.jacc.WebRoleRefPermission "", "**";
+  permission javax.security.jacc.WebRoleRefPermission "Faces Servlet", "**";
+  permission javax.security.jacc.WebRoleRefPermission "default", "**";
+};
+
+grant      principal org.glassfish.security.common.Group "admin" {
+  permission javax.security.jacc.WebResourcePermission "/admin/*", "DELETE,GET,HEAD,OPTIONS,POST,PUT,TRACE";
+};
+
+grant      principal org.glassfish.security.common.Group "user" {
+  permission javax.security.jacc.WebResourcePermission "/user/*", "DELETE,GET,HEAD,OPTIONS,POST,PUT,TRACE";
+};
+

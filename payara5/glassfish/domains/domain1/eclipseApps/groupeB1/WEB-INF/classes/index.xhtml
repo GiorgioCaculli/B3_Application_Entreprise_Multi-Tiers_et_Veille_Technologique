@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+    <title>Groupe B1</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <h:outputStylesheet name="css/main.css"/>
+    <h:outputScript name="js/jquery-3.6.0.min.js"/>
+</h:head>
+<h:body>
+    <h1>Hello World!</h1>
+
+    <h:outputScript target="head">
+        $ = jQuery;
+        $(document).ready(function ()
+        {
+            console.log("Hello World!");
+        });
+    </h:outputScript>
+    <h:form>
+        <h:commandButton value="List"
+                         action="#{activityControl.showActivitiesListPage()}"/>
+        <h:commandButton value="Add"
+                         action="#{activityControl.showCreateActivityPage()}"/>
+        <h:commandButton value="User" action="#{userControl.showProfilePage()}"/>
+    </h:form>
+</h:body>
+</html>
